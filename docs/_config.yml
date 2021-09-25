@@ -18,7 +18,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Zifan Wang (Atticus)
+title: chry-santhemum
+author: Zifan Wang
 email: zifanawang04@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   This is the home page of Zifan Wang (Atticus). Expect more content from this
