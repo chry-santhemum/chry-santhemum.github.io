@@ -4,8 +4,8 @@ title: About
 permalink: /about/
 ---
 
-This is the website of Zifan Wang, currently a high school senior
-studying at [PRISMS](https://prismsus.org).
+This is the website of Zifan Wang (also known as Atticus),
+currently a high school senior studying at [PRISMS](https://prismsus.org). 
 
 Short bio: I enjoy math, classical music, rock'n'roll, puzzle games,
 philosophy, reading...
@@ -21,4 +21,6 @@ King Crimson, Jimi Hendrix, Led Zeppelin, Jack White,
 
 - Favorite math gadgets: Prime number theorem,
 Euler characteristic, combinatorial nullstellensatz,
-Pontryagin duality, spectral sequence
+Pontryagin duality, spectral sequences.
+
+Expect more content from this site soon!
