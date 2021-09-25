@@ -6,8 +6,14 @@ permalink: /sitemap/
 
 ### Current projects
 
-- **Complex analysis reading notes**, solutions and notes to Stein and Shakarchi's *Complex Analysis*.
+- **Complex analysis notes**, solutions and notes to Stein and Shakarchi's *Complex Analysis*.
+
+- **MO training material**, handouts and problem sets for self-driven kids trying to get better at math competitions.
 
 ### All posts
 
+Poke me if I still haven't posted anything by the end of October 2021.  
+
 ### Future projects
+
+- **Infinite Clowning**, my take on DFW's *Infinite Jest*.

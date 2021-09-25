@@ -12,7 +12,7 @@ philosophy, reading...
 
 - Favorite classical composers: Schubert, Chopin, 
 [Charles-Valentin Alkan](https://en.wikipedia.org/wiki/Charles-Valentin_Alkan), 
-Ravel, Scriabin, [Eric Whitacre](https://ericwhitacre.com/)
+Ravel, Debussy, Scriabin, [Eric Whitacre](https://ericwhitacre.com/)
 
 - Favorite rock figures: The Velvet Underground, Pink Floyd, 
 King Crimson, Jimi Hendrix, Led Zeppelin, Jack White, 
