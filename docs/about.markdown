@@ -4,15 +4,21 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+This is the website of Zifan Wang, currently a high school senior
+studying at [PRISMS](https://prismsus.org).
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+Short bio: I enjoy math, classical music, rock'n'roll, puzzle games,
+philosophy, reading...
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+- Favorite classical composers: Schubert, Chopin, 
+[Alkan](https://en.wikipedia.org/wiki/Charles-Valentin_Alkan), 
+Ravel, Scriabin, [Whitacre](https://ericwhitacre.com/).
 
+- Favorite rock bands: The Velvet Underground, Pink Floyd, 
+King Crimson, Jimi Hendrix, Led Zeppelin, Jack White, 
+[Cui Jian](https://en.wikipedia.org/wiki/Cui_Jian),
+[Xu Wei](https://en.wikipedia.org/wiki/Xu_Wei_(musician))
 
-[jekyll-organization]: https://github.com/jekyll
+- Favorite math gadgets: Prime number theorem,
+Euler characteristic, combinatorial nullstellensatz,
+Pontryagin duality
