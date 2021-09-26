@@ -157,7 +157,7 @@ $$\abs{\gamma} = \int_a^b \abs{z'(t)} dt,$$
 
 then we must have that
 
-$$\abs{\int_{\gamma} f(z)dz} \le |\gamma| \cdot \sup_{z\in\gamma} \abs{f(z)}}.$$
+$$\abs{\int_{\gamma} f(z)dz} \le \abs{\gamma} \cdot \sup_{z\in\gamma} \abs{f(z)}.$$
 
 **Theorem 3.** If a continuous function $$f$$ has a primitive $$F$$ in $$\Omega$$, and $$\gamma$$ is a curve in $$\Omega$$ that begins at $$w_1$$ and ends at $$w_2$$, then
 
@@ -170,7 +170,7 @@ This follows from its real analogue (the fundamental theorem of calculus).
 
 ### Exercises and problems
 
-Unlike theorems and definitions (and everything else). exercises and problems are labeled according to the book. We try to cover all problems and select a few interesting exercises.
+Unlike theorems and definitions (and everything else), exercises and problems are labeled according to the book. We try to cover all problems and select a few interesting exercises.
 
 **Exercise 7.** For fixed $$w \in \DD$$, we have a mapping $$F: z\mapsto \frac{w-z}{1-\bar{w}z}$$ that is a bijective and holomorphic map $$\DD\to\DD$$ that fixes $$\partial D$$ and interchanges 0 and $$w$$. This is, in fact, just an inversion in disguise.
 
@@ -178,7 +178,7 @@ Unlike theorems and definitions (and everything else). exercises and problems ar
 
 $$\triangle f = \pard{^2f}{x^2} + \pard{^2f}{y^2} = 0.$$
 
-**Exercise 17.** Ratio test of convergence of power series: if $$\lim_{n\to \infty} \frac{\abs{a_{n+1}}{\abs{a_n}} = L$$, then $$\lim_{n\to \infty} \abs{a_n}^{1/n} = L$$.
+**Exercise 17.** Ratio test of convergence of power series: if $$\lim_{n\to \infty} \frac{\abs{a_{n+1}}}{\abs{a_n}} = L$$, then $$\lim_{n\to \infty} \abs{a_n}^{1/n} = L$$.
 
 [//]: # Jekyll requires blog post files to be named according to the following format:
 
