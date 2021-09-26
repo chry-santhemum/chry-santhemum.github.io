@@ -1,19 +1,23 @@
 ---
 layout: post
 title: "Complex analysis notes (part 1)"
-date: 2021-09-25
+date: 2021-09-26
 categories: mathematics
 usemathjax: true
 ---
 
-Hello!
+Notes on chapters 1 to 3 of *Complex Analysis* by Stein & Shakarchi.
+$$\newcommand{\CC}{\mathbb{C}}$$
 
-Hullo!
+## Chapter 1: Preliminaries
 
-Mathjax test: $$a^n + b^n = c^n$$
+We assume that the reader is familiar with basic properties of the complex numbers \(\mathbb{C}\).
 
-$$a^n+b^n=c^n$$
+\[\sum_{i=0}^n \sin(x)\]
 
+$$\begin{equation}
+\sum_{i=0}^n \sin(x) \tag{1}
+\end{equation}$$
 
 [//]: # Jekyll requires blog post files to be named according to the following format:
 
