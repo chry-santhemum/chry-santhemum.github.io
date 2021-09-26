@@ -33,6 +33,13 @@ facebook_username: zifan.wang.524
 theme: minima
 plugins:
   - jekyll-feed
+markdown: kramdown
+
+{% if page.usemathjax %}
+<script type="text/javascript" async
+ src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+{% end if %}
 
 # Exclude from processing.
 # The following items will not be processed, by default.
