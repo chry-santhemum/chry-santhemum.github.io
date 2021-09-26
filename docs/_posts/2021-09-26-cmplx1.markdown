@@ -88,29 +88,20 @@ $$\newcommand{\CC}{\mathbb{C}}
 \newcommand{\Set}{\mathsf{Set}}
 \newcommand{\Ch}{\mathsf{Ch}}
 \newcommand{\cat}[1]{\mathsf{#1}}
-\newcommand{\SA}{{\mathscr{A}}}
-\newcommand{\SB}{{\mathscr{B}}}
-\newcommand{\SC}{{\mathscr{C}}}
-\newcommand{\SD}{{\mathscr{D}}}
-\newcommand{\SF}{{\mathscr{F}}}
-\newcommand{\SG}{{\mathscr{G}}}
+\newcommand{\SA}{\mathscr{A}}
+\newcommand{\SB}{\mathscr{B}}
+\newcommand{\SC}{\mathscr{C}}
+\newcommand{\SD}{\mathscr{D}}
+\newcommand{\SF}{\mathscr{F}}
+\newcommand{\SG}{\mathscr{G}}
 \newcommand{\scr}[1]{\mathscr{#1}}
-\newcommand{\KN}{\mathfrak{N}}
-\newcommand{\Ka}{\mathfrak{a}}
-\newcommand{\Kb}{\mathfrak{b}}
-\newcommand{\Kc}{\mathfrak{c}}
-\newcommand{\Kf}{\mathfrak{f}}
-\newcommand{\Kg}{\mathfrak{g}}
-\newcommand{\Km}{\mathfrak{m}}
-\newcommand{\Kn}{\mathfrak{n}}
-\newcommand{\Kp}{\mathfrak{p}}
 \newcommand{\frk}[1]{\mathfrak{#1}}$$
 
 ## Chapter 1: Preliminaries
 
 We assume that the reader is familiar with basic properties of the complex numbers $$\mathbb{C}$$.
 
-$$\Aut(\Kf \otimes \Vect)$$
+$$\Aut(\SA \otimes \Vect \eps \diff{x}{y} \sgn \Hom)$$
 
 [//]: # Jekyll requires blog post files to be named according to the following format:
 
