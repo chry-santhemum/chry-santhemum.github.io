@@ -1,13 +1,12 @@
 ---
 layout: post
-title: "Complex analysis notes (part 1)"
+title: "Complex analysis notes (chapter 1)"
 date: 2021-09-26
 categories: mathematics
 usemathjax: true
 ---
 
-Notes on chapters 1 to 3 of *Complex Analysis* by Stein & Shakarchi. Beware that except for solutions for the problems and exercises, these notes will contain minimal exposition, since the notes are mostly for my own review.
-
+Notes on chapter 1 of *Complex Analysis* by Stein & Shakarchi. Beware that except for solutions for the problems and exercises, these notes will contain minimal exposition, since the notes are mostly intended for my own review.
 $$\newcommand{\diff}[2]{\frac{d #1}{d #2}}
 \newcommand{\pard}[2]{\frac{\partial #1}{\partial #2}}
 \renewcommand{\bar}[1]{\overline{#1}}
@@ -148,14 +147,38 @@ Conversely, we have the following theorem:
 
 ### Integration along curves
 
-A *smooth curve* is a map $$z(t)$$ from a closed interval to $$\CC$$ that is differentiable and such that $$z'(t) \neq 0$$. (In particular, it need not be a smooth map.) A *curve* often refers to a piecewise smooth curve. Given a continuous function $$f$$, a smooth curve $$\gamma$$ parametrized by $$z(t): [a,b] \to \CC$$, define
+A *smooth curve* is a map $$z(t)$$ from a closed interval to $$\CC$$ that is differentiable and such that $$z'(t) \neq 0$$ (in particular, it need not be a smooth map). A *curve* often refers to a piecewise smooth curve. Given a continuous function $$f$$, a smooth curve $$\gamma$$ parametrized by $$z(t): [a,b] \to \CC$$, define
 
 $$ \int_{\gamma} f(z)dz = \int_a^b f(z(t)) z'(t) dt.$$
 
-This depends on $$\gamma$$ but not on the parametrization because of the chain rule. Also, define the length of $$\gamma$$
+This depends on $$\gamma$$ but not on the parametrization because of the chain rule. Define the length of $$\gamma$$
 
-$$\abs{\gamma} = \int_a^b \abs{z'(t)} dt.$$
+$$\abs{\gamma} = \int_a^b \abs{z'(t)} dt,$$
 
+then we must have that
+
+$$\abs{\int_{\gamma} f(z)dz} \le |\gamma| \cdot \sup_{z\in\gamma} \abs{f(z)}}.$$
+
+**Theorem 3.** If a continuous function $$f$$ has a primitive $$F$$ in $$\Omega$$, and $$\gamma$$ is a curve in $$\Omega$$ that begins at $$w_1$$ and ends at $$w_2$$, then
+
+$$\int_{\gamma} f(z)dz = F(w_2) - F(w_1).$$
+
+This follows from its real analogue (the fundamental theorem of calculus). 
+
+**Theorem 4.** If $$f$$ is holomorphic in a region $$\Omega$$ and $$f' = 0$$, then $$f$$ is constant.
+
+
+### Exercises and problems
+
+Unlike theorems and definitions (and everything else). exercises and problems are labeled according to the book. We try to cover all problems and select a few interesting exercises.
+
+**Exercise 7.** For fixed $$w \in \DD$$, we have a mapping $$F: z\mapsto \frac{w-z}{1-\bar{w}z}$$ that is a bijective and holomorphic map $$\DD\to\DD$$ that fixes $$\partial D$$ and interchanges 0 and $$w$$. This is, in fact, just an inversion in disguise.
+
+**Exercise 10.** If $$f$$ is holomorphic in open $$\Omega$$, then it is harmonic:
+
+$$\triangle f = \pard{^2f}{x^2} + \pard{^2f}{y^2} = 0.$$
+
+**Exercise 17.** Ratio test of convergence of power series: if $$\lim_{n\to \infty} \frac{\abs{a_{n+1}}{\abs{a_n}} = L$$, then $$\lim_{n\to \infty} \abs{a_n}^{1/n} = L$$.
 
 [//]: # Jekyll requires blog post files to be named according to the following format:
 
