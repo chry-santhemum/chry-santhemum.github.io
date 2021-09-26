@@ -96,9 +96,14 @@ $$\newcommand{\diff}[2]{\frac{d #1}{d #2}}
 \newcommand{\SG}{\mathscr{G}}
 \newcommand{\scr}[1]{\mathscr{#1}}
 \newcommand{\frk}[1]{\mathfrak{#1}}
-\newcommand{\abs}[1]{\left| #1 \right|}$$
+\newcommand{\abs}[1]{\left| #1 \right|}
+\newcommand{\pr}[1]{\left( #1 \right)}
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil$$
 
 ## Chapter 1: Preliminaries
+
+### Complex differentiation
 
 A few useful terminologies and facts:
 
@@ -134,11 +139,23 @@ We can also define the Wirtinger derivatives
 $$\pard{}{z} = \frac12 (\pard{}{x} - i\pard{}{y})$$,
 $$\pard{}{\bar{z}} = \frac12 (\pard{}{x} + i\pard{}{y})$$. Let $$f = u + iv$$, then using (1), we can summarize:
 
-**Theorem.** If $$f$$ is holomorphic at $$z_0$$, then $$\pard{f}{\bar{z}}(z_0) = 0$$ and $$\pard{f}{z}(z_0) = f'(z_0) = 2\pard{u}{z}(z_0)$$. In addition, viewing $$f$$ as a map $$F(x,y): \RR^2 \to \RR^2$$, then $$F$$ is Fréchet differentiable at $$z_0$$, and the determinant of the Jacobian matrix is equal to $$\abs{f'(z_0)}^2$$.
+**Theorem 1.** If $$f$$ is holomorphic at $$z_0$$, then $$\pard{f}{\bar{z}}(z_0) = 0$$ and $$\pard{f}{z}(z_0) = f'(z_0) = 2\pard{u}{z}(z_0)$$. In addition, viewing $$f$$ as a map $$F(x,y): \RR^2 \to \RR^2$$, then $$F$$ is Fréchet differentiable at $$z_0$$, and the determinant of the Jacobian matrix is equal to $$\abs{f'(z_0)}^2$$.
 
 Conversely, we have the following theorem:
 
-**Theorem.** If $$f = u+iv$$ (defined on an open set $$\Omega$$) is such that $$u,v$$ are continuously differentiable and satisfy (1), then $$f$$ is holomorphic on $$\Omega$$, and $$f'(z_0) = \pard{f}{z}$$.
+**Theorem 2.** If $$f = u+iv$$ (defined on an open set $$\Omega$$) is such that $$u,v$$ are continuously differentiable and satisfy (1), then $$f$$ is holomorphic on $$\Omega$$, and $$f'(z_0) = \pard{f}{z}$$.
+
+
+### Integration along curves
+
+A *smooth curve* is a map $$z(t)$$ from a closed interval to $$\CC$$ that is differentiable and such that $$z'(t) \neq 0$$. (In particular, it need not be a smooth map.) A *curve* often refers to a piecewise smooth curve. Given a continuous function $$f$$, a smooth curve $$\gamma$$ parametrized by $$z(t): [a,b] \to \CC$$, define
+
+$$ \int_{\gamma} f(z)dz = \int_a^b f(z(t)) z'(t) dt.$$
+
+This depends on $$\gamma$$ but not on the parametrization because of the chain rule. Also, define the length of $$\gamma$$
+
+$$\abs{\gamma} = \int_a^b \abs{z'(t)} dt.$$
+
 
 [//]: # Jekyll requires blog post files to be named according to the following format:
 
