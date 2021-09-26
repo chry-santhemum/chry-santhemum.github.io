@@ -6,9 +6,9 @@ categories: mathematics
 usemathjax: true
 ---
 
-Notes on chapters 1 to 3 of *Complex Analysis* by Stein & Shakarchi.
-$$\newcommand{\CC}{\mathbb{C}}
-\newcommand{\diff}[2]{\frac{d #1}{d #2}}
+Notes on chapters 1 to 3 of *Complex Analysis* by Stein & Shakarchi. Beware that except for solutions for the problems and exercises, these notes will contain minimal exposition, since the notes are mostly for my own review.
+
+$$\newcommand{\diff}[2]{\frac{d #1}{d #2}}
 \newcommand{\pard}[2]{\frac{\partial #1}{\partial #2}}
 \renewcommand{\bar}[1]{\overline{#1}}
 \newcommand{\exist}{\exists\thinspace}
@@ -99,21 +99,45 @@ $$\newcommand{\CC}{\mathbb{C}}
 
 ## Chapter 1: Preliminaries
 
-We assume that the reader is familiar with basic properties of the complex numbers $$\CC$$, both its
-algebraic and analytic properties. However, we still want to highlight a few terminologies and facts
-that will be useful:
+A few useful terminologies and facts:
 
 - $$\CC$$ is complete, meaning that every Cauchy sequence converges;
 - $$\DD$$ denotes the open unit disc;
 - Equivalent definitions of *compactness* in $$\CC$$: every open cover has finite subcover $$\iff$$ closed and bounded $$\iff$$ every sequence has a converging subsequence;
 - A *region* is a connected open subset of $$\CC$$; 
 - A subset of $$\CC$$ is connected if and only if it is simply connected;
-- Definition of exp and related functions:
-$$e^z = \exp(z) = \sum_{n\ge 0} \frac{z^n}{n!}$$
-$$\cos(z) = \frac{e^{iz} + e^{-iz}}{2}, \quad \sin(z) = \frac{e^{iz} - e^{-iz}}{2i}$$
-$$\sinh(z) = -i\sin(iz), \quad \cosh(z) = \cos(iz).$$
+- Definition of exp and trigonometric functions:
+$$e^z = \exp(z) = \sum_{n\ge 0} \frac{z^n}{n!}$$,
+$$\cos(z) = \frac{e^{iz} + e^{-iz}}{2}$$,
+$$\sin(z) = \frac{e^{iz} - e^{-iz}}{2i}$$,
+$$\sinh(z) = -i\sin(iz)$$, and
+$$\cosh(z) = \cos(iz).$$
+- Cantor's intersection theorem: any descending sequence of compact sets $$\Omega_1 \supseteq \Omega_2 \supseteq \dots$$ in $$\CC$$ have nonempty intersection. If their diameters converge to 0, then there is an unique intersection point.
+- Extreme value theorem: any continuous function $$f: \CC \to \RR$$ on a compact set $$\Omega$$ attains a bounded maximum and minimum in $$\Omega$$.
 
+For an open set $$\Omega$$, a point $$z_0\in \Omega$$ and a function $$f: \Omega \to \CC$$, we say $$f$$ is holomorphic at $$z_0$$ if the limit
 
+$$\lim_{z \to z_0} \frac{f(z) - f(z_0)}{z-z_0}$$
+
+exists. If it does, call this $$f'(z_0)$$.
+
+It is not hard to show that the sum, product, quotient, and chain rules all hold under this definition.
+
+Using the identification $$\CC \cong \RR^2$$, any complex-valued function $$f$$ may also be viewed as having values in $$\RR^2$$. Taking this view, we can show that if $$f$$ is holomorphic at $$z_0$$, then
+
+$$\begin{equation} \pard{f}{x}(z_0) = f'(z_0) = \frac{1}{i} \pard{f}{y}(z_0). \end{equation}$$
+
+This is the Cauchy-Riemann equation(s).
+
+We can also define the Wirtinger derivatives
+$$\pard{}{z} = \frac12 (\pard{}{x} - i\pard{}{y})$$,
+$$\pard{}{\bar{z}} = \frac12 (\pard{}{x} + i\pard{}{y})$$. Let $f = u + iv$, then using the C-R equation, we can summarize:
+
+**Theorem.** If $$f$$ is holomorphic at $$z_0$$, then $$\pard{f}{\bar{z}}(z_0) = 0$$ and $$\pard{f}{z}(z_0) = f'(z_0) = 2\pard{u}{z}(z_0)$$. In addition, viewing $$f$$ as a map $$F(x,y): \RR^2 \to \RR^2$$, then $$F$$ is Fréchet differentiable at $$z_0$$, and the determinant of the Jacobian matrix is equal to $$|f'(z_0)|^2$$.
+
+Conversely, we have the following theorem:
+
+**Theorem.** If $$f = u+iv$$ (defined on an open set $$\Omega$$) is such that $$u,v$$ are continuously differentiable and satisfy (1), then $$f$$ is holomorphic on $$\Omega$$, and $$f'(z_0) = \pard{f}{z}$$.
 
 [//]: # Jekyll requires blog post files to be named according to the following format:
 
