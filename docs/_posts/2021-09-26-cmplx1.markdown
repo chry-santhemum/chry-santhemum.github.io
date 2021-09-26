@@ -11,9 +11,9 @@ $$\newcommand{\CC}{\mathbb{C}}$$
 
 ## Chapter 1: Preliminaries
 
-We assume that the reader is familiar with basic properties of the complex numbers \(\mathbb{C}\).
+We assume that the reader is familiar with basic properties of the complex numbers $$\mathbb{C}$$.
 
-\[\sum_{i=0}^n \sin(x)\]
+$$\sum_{i=0}^n \sin(x)$$
 
 $$\begin{equation}
 \sum_{i=0}^n \sin(x) \tag{1}
