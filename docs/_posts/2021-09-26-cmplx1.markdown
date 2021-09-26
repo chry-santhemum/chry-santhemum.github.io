@@ -7,17 +7,110 @@ usemathjax: true
 ---
 
 Notes on chapters 1 to 3 of *Complex Analysis* by Stein & Shakarchi.
-$$\newcommand{\CC}{\mathbb{C}}$$
+$$\newcommand{\CC}{\mathbb{C}}
+\newcommand{\diff}[2]{\frac{d #1}{d #2}}
+\newcommand{\pard}[2]{\frac{\partial #1}{\partial #2}}
+\renewcommand{\bar}[1]{\overline{#1}}
+\newcommand{\exist}{\exists\thinspace}
+\newcommand{\all}{\forall\thinspace}
+\newcommand{\mang}{\measuredangle}
+\newcommand{\actson}{\curvearrowright}
+\newcommand{\degrees}{^{\circ}}
+\newcommand{\sumcyc}{\sum_{\textrm{cyc}}}
+\newcommand{\sumsym}{\sum_{\textrm{sym}}}
+\newcommand{\jacobi}[2]{\left( \frac{#1}{#2} \right)}
+\newcommand{\given}{\Longleftarrow}
+\newcommand{\into}{\hookrightarrow}
+\newcommand{\proj}{\twoheadrightarrow}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\ol}{\overline}
+\newcommand{\ul}{\underline}
+\newcommand{\wt}{\widetilde}
+\newcommand{\wh}{\widehat}
+\newcommand{\cbrt}[1]{\sqrt[3]{#1}}
+\newcommand{\nrt}[1]{\sqrt[n]{#1}}
+\renewcommand{\vec}[1]{\overrightarrow{#1}}
+\renewcommand{\iff}{\Longleftrightarrow}
+\renewcommand{\implies}{\Longrightarrow}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\ad}{ad}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\Coker}{Coker}
+\DeclareMathOperator{\img}{img}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Tr}{tr}
+\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\Spec}{Spec}
+\renewcommand{\AA}{\mathbb{A}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\CP}{\mathbb{CP}}
+\newcommand{\DD}{\mathbb{D}}
+\newcommand{\EE}{\mathbb{E}}
+\newcommand{\FF}{\mathbb{F}}
+\newcommand{\HH}{\mathbb{H}}
+\newcommand{\ii}{\mathbb{i}}
+\newcommand{\II}{\mathbb{I}}
+\newcommand{\KK}{\mathbb{K}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\OO}{\mathbb{O}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\RP}{\mathbb{RP}}
+\newcommand{\XX}{\mathbb{X}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\mbb}[1]{\mathbb{#1}}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\lcm}{\mathrm{lcm}}
+\newcommand{\ord}{\mathrm{ord}}
+\newcommand{\Pow}{\mathrm{Pow}}
+\newcommand{\sgn}{\mathrm{sgn}}
+\newcommand{\Hom}{\mathrm{Hom}}
+\newcommand{\Iso}{\mathrm{Iso}}
+\newcommand{\Mat}{\mathrm{Mat}}
+\newcommand{\Reg}{\mathrm{Reg}}
+\newcommand{\Rad}{\mathrm{Rad}}
+\newcommand{\Ext}{\mathrm{Ext}}
+\newcommand{\Tor}{\mathrm{Tor}}
+\newcommand{\Mor}{\mathrm{Mor}}
+\newcommand{\rad}{\mathrm{rad}}
+\renewcommand{\Im}{\mathrm{Im}}
+\newcommand{\Ann}{\mathrm{Ann}}
+\newcommand{\mrm}[1]{\mathrm{#1}}
+\newcommand{\Grp}{\mathsf{Grp}}
+\newcommand{\AbGrp}{\mathsf{AbGrp}}
+\newcommand{\Vect}{\mathsf{Vect}}
+\newcommand{\Mod}{\mathsf{Mod}}
+\newcommand{\Set}{\mathsf{Set}}
+\newcommand{\Ch}{\mathsf{Ch}}
+\newcommand{\cat}[1]{\mathsf{#1}}
+\newcommand{\SA}{{\mathscr{A}}}
+\newcommand{\SB}{{\mathscr{B}}}
+\newcommand{\SC}{{\mathscr{C}}}
+\newcommand{\SD}{{\mathscr{D}}}
+\newcommand{\SF}{{\mathscr{F}}}
+\newcommand{\SG}{{\mathscr{G}}}
+\newcommand{\scr}[1]{\mathscr{#1}}
+\newcommand{\KN}{\mathfrak{N}}
+\newcommand{\Ka}{\mathfrak{a}}
+\newcommand{\Kb}{\mathfrak{b}}
+\newcommand{\Kc}{\mathfrak{c}}
+\newcommand{\Kf}{\mathfrak{f}}
+\newcommand{\Kg}{\mathfrak{g}}
+\newcommand{\Km}{\mathfrak{m}}
+\newcommand{\Kn}{\mathfrak{n}}
+\newcommand{\Kp}{\mathfrak{p}}
+\newcommand{\frk}[1]{\mathfrak{#1}}$$
 
 ## Chapter 1: Preliminaries
 
 We assume that the reader is familiar with basic properties of the complex numbers $$\mathbb{C}$$.
 
-$$\sum_{i=0}^n \sin(x)$$
-
-$$\begin{equation}
-\sum_{i=0}^n \sin(x) \tag{1}
-\end{equation}$$
+$$\Aut(\Kf \otimes \Vect)$$
 
 [//]: # Jekyll requires blog post files to be named according to the following format:
 
