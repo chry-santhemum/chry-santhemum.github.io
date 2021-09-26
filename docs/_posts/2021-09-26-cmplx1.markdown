@@ -99,9 +99,21 @@ $$\newcommand{\CC}{\mathbb{C}}
 
 ## Chapter 1: Preliminaries
 
-We assume that the reader is familiar with basic properties of the complex numbers $$\mathbb{C}$$.
+We assume that the reader is familiar with basic properties of the complex numbers $$\CC$$, both its
+algebraic and analytic properties. However, we still want to highlight a few terminologies and facts
+that will be useful:
 
-$$\Aut(\SA \otimes \Vect \eps \diff{x}{y} \sgn \Hom)$$
+- $$\CC$$ is complete, meaning that every Cauchy sequence converges;
+- $$\DD$$ denotes the open unit disc;
+- Equivalent definitions of *compactness* in $$\CC$$: every open cover has finite subcover $$\iff$$ closed and bounded $$\iff$$ every sequence has a converging subsequence;
+- A *region* is a connected open subset of $$\CC$$; 
+- A subset of $$\CC$$ is connected if and only if it is simply connected;
+- Definition of exp and related functions:
+$$e^z = \exp(z) = \sum_{n\ge 0} \frac{z^n}{n!}$$
+$$\cos(z) = \frac{e^{iz} + e^{-iz}}{2}, \quad \sin(z) = \frac{e^{iz} - e^{-iz}}{2i}$$
+$$\sinh(z) = -i\sin(iz), \quad \cosh(z) = \cos(iz).$$
+
+
 
 [//]: # Jekyll requires blog post files to be named according to the following format:
 
