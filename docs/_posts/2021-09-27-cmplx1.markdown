@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Complex analysis notes (chapter 1)"
-date: 2021-09-26
+title: "Complex analysis notes (part 1)"
+date: 2021-09-27
 categories: mathematics
 usemathjax: true
 ---
 
-Notes on chapter 1 of *Complex Analysis* by Stein & Shakarchi. Beware that except for solutions for the problems and exercises, these notes will contain minimal exposition, since the notes are mostly intended for my own review.
+Notes on chapter 1–3 of *Complex Analysis* by Stein & Shakarchi. Beware that except for solutions for the problems and exercises, these notes will contain minimal exposition, since the notes are mostly intended for my own review.
 $$\newcommand{\diff}[2]{\frac{d #1}{d #2}}
 \newcommand{\pard}[2]{\frac{\partial #1}{\partial #2}}
 \renewcommand{\bar}[1]{\overline{#1}}
@@ -64,6 +64,7 @@ $$\newcommand{\diff}[2]{\frac{d #1}{d #2}}
 \newcommand{\ZZ}{\mathbb{Z}}
 \newcommand{\mbb}[1]{\mathbb{#1}}
 \newcommand{\id}{\mathrm{id}}
+\newcommand{\diam}{\mathrm{diam}}
 \newcommand{\lcm}{\mathrm{lcm}}
 \newcommand{\ord}{\mathrm{ord}}
 \newcommand{\Pow}{\mathrm{Pow}}
@@ -116,8 +117,8 @@ $$e^z = \exp(z) = \sum_{n\ge 0} \frac{z^n}{n!}$$,
 $$\cos(z) = \frac{e^{iz} + e^{-iz}}{2}$$,
 $$\sin(z) = \frac{e^{iz} - e^{-iz}}{2i}$$,
 $$\sinh(z) = -i\sin(iz)$$, and
-$$\cosh(z) = \cos(iz).$$
-- Cantor's intersection theorem: any descending sequence of compact sets $$\Omega_1 \supseteq \Omega_2 \supseteq \dots$$ in $$\CC$$ have nonempty intersection. If their diameters converge to 0, then there is an unique intersection point.
+$$\cosh(z) = \cos(iz)$$;
+- Cantor's intersection theorem: any descending sequence of compact sets $$\Omega_1 \supseteq \Omega_2 \supseteq \dots$$ in $$\CC$$ have nonempty intersection. If their diameters converge to 0, then there is an unique intersection point;
 - Extreme value theorem: any continuous function $$f: \CC \to \RR$$ on a compact set $$\Omega$$ attains a bounded maximum and minimum in $$\Omega$$.
 
 For an open set $$\Omega$$, a point $$z_0\in \Omega$$ and a function $$f: \Omega \to \CC$$, we say $$f$$ is holomorphic at $$z_0$$ if the limit
@@ -179,6 +180,42 @@ Unlike theorems and definitions (and everything else), exercises and problems ar
 $$\triangle f = \pard{^2f}{x^2} + \pard{^2f}{y^2} = 0.$$
 
 **Exercise 17.** Ratio test of convergence of power series: if $$\lim_{n\to \infty} \frac{\abs{a_{n+1}}}{\abs{a_n}} = L$$, then $$\lim_{n\to \infty} \abs{a_n}^{1/n} = L$$.
+
+
+## Chapter 2: Cauchy's theorem
+
+This is where the fun stuff starts.
+
+### Cauchy's theorem
+
+Theorem 3 above implies that if $$f$$ has a primitive in some open $$\Omega$$, then for any closed curve $$\gamma$$ in $$\Omega$$, 
+
+$$\int_{\gamma} f(z)dz = 0.$$
+
+We will prove a series of results related to this type of expression.
+
+**Theorem 5.** (Goursat's theorem) If $$f$$ is holomorphic in $$Omega$$, and $$T\subset\Omega$$ is a triangle whose interior is also inside $$\Omega$$, then
+
+$$\int_{T} f(z)dz = 0.$$
+
+*Proof.* By repeatedly taking midpoints, we create a nested sequence of triangles $T = T_0 \supset T_1 \supset T_2 \dots$ such that
+
+$$\abs{\int_{T} f(z)dz} \le 4^n\abs{\int_{T_n} f(z)dz}.$$
+
+The diameters of $$T_n$$ converge to 0, so there exists an unique $$w\in \Omega$$ that lie on or inside all $$T_n$$s. Since $$f$$ is holomorphic at $$w$$, we can write 
+
+$$f(z) = f(w) + f'(w)(z-w) + \phi(z)(z-w)$$
+
+where $$\phi(z)\to 0$$ as $$z\to w$$. Then we can write
+
+$$\abs{\int_{T_n} f(z)dz} = \abs{\int_{T_n} (f(w) + f'(w)(z-w) + \phi(z)(z-w)) dz}.$$
+
+Since the constant and linear terms have primitives, we conclude that
+
+$$\abs{\int_{T_n} f(z)dz} = \abs{\int_{T_n} \phi(z)(z-w) dz} \le 
+\abs{T_n}\cdot \sup_{z\in T_n} \abs{\phi(z)(z-w)} \le 4^{-n}\abs{T_0}\diam(T_0)\cdot \sup_{z\in T_n} \abs{\phi(z)}.$$
+
+But $\abs{\phi(z)} \to 0$ as $z\to w$, so the $\sup_{z\in T_n} \abs{\phi(z)} \to 0$ as $n\to\infty$. This concludes the proof.
 
 [//]: # Jekyll requires blog post files to be named according to the following format:
 
