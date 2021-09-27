@@ -216,7 +216,7 @@ Since the constant and linear terms have primitives, we conclude that
 $$\abs{\int_{T_n} f(z)dz} = \abs{\int_{T_n} \phi(z)(z-w) dz} \le 
 \abs{T_n}\cdot \sup_{z\in T_n} \abs{\phi(z)(z-w)} \le 4^{-n}\abs{T_0}\cdot \diam(T_0)\cdot \sup_{z\in T_n} \abs{\phi(z)}.$$
 
-Here, $$|T_n|$$ is the perimeter of $$T_n$$. But $$\abs{\phi(z)} \to 0$$ as $$z\to w$$, so
+Here, $$\abs{T_n}$$ is the perimeter of $$T_n$$. But $$\abs{\phi(z)} \to 0$$ as $$z\to w$$, so
 
 $$\sup_{z\in T_n} \abs{\phi(z)} \to 0$$
 
@@ -238,10 +238,12 @@ The same proof in fact holds for not just disks, but any contour whose notion of
 An important class of applications of Cauchy's theorem is computing lots of definite integrals. Some examples:
 
 - For real $$\xi$$, 
+
 $$e^{-\pi \xi^2} = \int_{-\infty}^{\infty} e^{-\pi x^2}e^{-2\pi i x \xi}dx,$$
+
 i.e. $$e^{-\pi x^2}$$ is its own Fourier transform. (Integrate $$e^{-\pi z^2}$$ along the contour $$-R\to R\to R+i\xi \to -R+i\xi \to -R$$)
 
-- $$\int_0^{\infty} \frac{1-\cos x}{x^2} dx = \frac{\pi}{2}$$. (Integrate $$\frac{1-e^{iz}}{z^2}$$ along the indented semicircle with radii $$\epsilon\to 0$ and $R\to\infty$$)
+- $$\int_0^{\infty} \frac{1-\cos x}{x^2} dx = \frac{\pi}{2}$$. (Integrate $$\frac{1-e^{iz}}{z^2}$$ along the indented semicircle with radii $$\epsilon\to 0$$ and $$R\to\infty$$)
 
 - Fresnel integerals:
 
@@ -253,6 +255,10 @@ $$\int_0^{\infty} \sin(x^2)dx = \int_0^{\infty} \cos(x^2)dx =  \frac{\sqrt{2\pi}
 
 
 ### Cauchy's integral formulas
+
+Integrating along the keyhole contour and passing the width of the corridor and the inner circle to 0.
+
+**Theorem 2.3.**  (Cauchy's integral formula) 
 
 
 [//]: # Jekyll requires blog post files to be named according to the following format:
