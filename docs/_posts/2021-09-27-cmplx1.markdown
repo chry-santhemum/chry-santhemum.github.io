@@ -139,11 +139,11 @@ We can also define the Wirtinger derivatives
 $$\pard{}{z} = \frac12 (\pard{}{x} - i\pard{}{y})$$,
 $$\pard{}{\bar{z}} = \frac12 (\pard{}{x} + i\pard{}{y})$$. Let $$f = u + iv$$, then using (1), we can summarize:
 
-**Theorem 1.** If $$f$$ is holomorphic at $$z_0$$, then $$\pard{f}{\bar{z}}(z_0) = 0$$ and $$\pard{f}{z}(z_0) = f'(z_0) = 2\pard{u}{z}(z_0)$$. In addition, viewing $$f$$ as a map $$F(x,y): \RR^2 \to \RR^2$$, then $$F$$ is Fréchet differentiable at $$z_0$$, and the determinant of the Jacobian matrix is equal to $$\abs{f'(z_0)}^2$$.
+**Theorem 1.1.** If $$f$$ is holomorphic at $$z_0$$, then $$\pard{f}{\bar{z}}(z_0) = 0$$ and $$\pard{f}{z}(z_0) = f'(z_0) = 2\pard{u}{z}(z_0)$$. In addition, viewing $$f$$ as a map $$F(x,y): \RR^2 \to \RR^2$$, then $$F$$ is Fréchet differentiable at $$z_0$$, and the determinant of the Jacobian matrix is equal to $$\abs{f'(z_0)}^2$$.
 
 Conversely, we have the following theorem:
 
-**Theorem 2.** If $$f = u+iv$$ (defined on an open set $$\Omega$$) is such that $$u,v$$ are continuously differentiable and satisfy (1), then $$f$$ is holomorphic on $$\Omega$$, and $$f'(z_0) = \pard{f}{z}$$.
+**Theorem 1.2.** If $$f = u+iv$$ (defined on an open set $$\Omega$$) is such that $$u,v$$ are continuously differentiable and satisfy (1), then $$f$$ is holomorphic on $$\Omega$$, and $$f'(z_0) = \pard{f}{z}$$.
 
 
 ### Integration along curves
@@ -160,26 +160,27 @@ then we must have that
 
 $$\abs{\int_{\gamma} f(z)dz} \le \abs{\gamma} \cdot \sup_{z\in\gamma} \abs{f(z)}.$$
 
-**Theorem 3.** If a continuous function $$f$$ has a primitive $$F$$ in $$\Omega$$, and $$\gamma$$ is a curve in $$\Omega$$ that begins at $$w_1$$ and ends at $$w_2$$, then
+**Theorem 1.3.** If a continuous function $$f$$ has a primitive $$F$$ in $$\Omega$$, and $$\gamma$$ is a curve in $$\Omega$$ that begins at $$w_1$$ and ends at $$w_2$$, then
 
 $$\int_{\gamma} f(z)dz = F(w_2) - F(w_1).$$
 
 This follows from its real analogue (the fundamental theorem of calculus). 
 
-**Theorem 4.** If $$f$$ is holomorphic in a region $$\Omega$$ and $$f' = 0$$, then $$f$$ is constant.
+**Theorem 1.4.** If $$f$$ is holomorphic in a region $$\Omega$$ and $$f' = 0$$, then $$f$$ is constant.
 
 
-### Exercises and problems
+### Exercises
 
 Unlike theorems and definitions (and everything else), exercises and problems are labeled according to the book. We try to cover all problems and select a few interesting exercises.
 
-**Exercise 7.** For fixed $$w \in \DD$$, we have a mapping $$F: z\mapsto \frac{w-z}{1-\bar{w}z}$$ that is a bijective and holomorphic map $$\DD\to\DD$$ that fixes $$\partial D$$ and interchanges 0 and $$w$$. This is, in fact, just an inversion in disguise.
+**Exercise 1.7.** For fixed $$w \in \DD$$, we have a mapping $$F: z\mapsto \frac{w-z}{1-\bar{w}z}$$ that is a bijective and holomorphic map $$\DD\to\DD$$ that fixes $$\partial D$$ and interchanges 0 and $$w$$. This is, in fact, just an inversion in disguise.
 
-**Exercise 10.** If $$f$$ is holomorphic in open $$\Omega$$, then it is harmonic:
+**Exercise 1.10.** If $$f$$ is holomorphic in open $$\Omega$$, then it is harmonic:
 
 $$\triangle f = \pard{^2f}{x^2} + \pard{^2f}{y^2} = 0.$$
 
-**Exercise 17.** Ratio test of convergence of power series: if $$\lim_{n\to \infty} \frac{\abs{a_{n+1}}}{\abs{a_n}} = L$$, then $$\lim_{n\to \infty} \abs{a_n}^{1/n} = L$$.
+**Exercise 1.17.** Ratio test of convergence of power series: if $$\lim_{n\to \infty} \frac{\abs{a_{n+1}}}{\abs{a_n}} = L$$, then $$\lim_{n\to \infty} \abs{a_n}^{1/n} = L$$.
+
 
 
 ## Chapter 2: Cauchy's theorem
@@ -188,17 +189,17 @@ This is where the fun stuff starts.
 
 ### Cauchy's theorem
 
-Theorem 3 above implies that if $$f$$ has a primitive in some open $$\Omega$$, then for any closed curve $$\gamma$$ in $$\Omega$$, 
+Theorem 1.3 above implies that if $$f$$ has a primitive in some open $$\Omega$$, then for any closed curve $$\gamma$$ in $$\Omega$$, 
 
 $$\int_{\gamma} f(z)dz = 0.$$
 
 We will prove a series of results related to this type of expression.
 
-**Theorem 5.** (Goursat's theorem) If $$f$$ is holomorphic in $$Omega$$, and $$T\subset\Omega$$ is a triangle whose interior is also inside $$\Omega$$, then
+**Theorem 2.1.** (Goursat's theorem) If $$f$$ is holomorphic in $$\Omega$$, and $$T\subset\Omega$$ is a triangle whose interior is also inside $$\Omega$$, then
 
 $$\int_{T} f(z)dz = 0.$$
 
-*Proof.* By repeatedly taking midpoints, we create a nested sequence of triangles $T = T_0 \supset T_1 \supset T_2 \dots$ such that
+*Proof.* By repeatedly taking midpoints, we create a nested sequence of triangles $$T = T_0 \supset T_1 \supset T_2 \dots$$ such that
 
 $$\abs{\int_{T} f(z)dz} \le 4^n\abs{\int_{T_n} f(z)dz}.$$
 
@@ -213,9 +214,46 @@ $$\abs{\int_{T_n} f(z)dz} = \abs{\int_{T_n} (f(w) + f'(w)(z-w) + \phi(z)(z-w)) d
 Since the constant and linear terms have primitives, we conclude that
 
 $$\abs{\int_{T_n} f(z)dz} = \abs{\int_{T_n} \phi(z)(z-w) dz} \le 
-\abs{T_n}\cdot \sup_{z\in T_n} \abs{\phi(z)(z-w)} \le 4^{-n}\abs{T_0}\diam(T_0)\cdot \sup_{z\in T_n} \abs{\phi(z)}.$$
+\abs{T_n}\cdot \sup_{z\in T_n} \abs{\phi(z)(z-w)} \le 4^{-n}\abs{T_0}\cdot \diam(T_0)\cdot \sup_{z\in T_n} \abs{\phi(z)}.$$
 
-But $\abs{\phi(z)} \to 0$ as $z\to w$, so the $\sup_{z\in T_n} \abs{\phi(z)} \to 0$ as $n\to\infty$. This concludes the proof.
+Here, $$|T_n|$$ is the perimeter of $$T_n$$. But $$\abs{\phi(z)} \to 0$$ as $$z\to w$$, so
+
+$$\sup_{z\in T_n} \abs{\phi(z)} \to 0$$
+
+as $$n\to\infty$$. This concludes the proof. $$\square$$
+
+
+**Theorem 2.2.** (Cauchy's theorem for a disc) If $$f$$ is holomorphic in a disc, and $$\gamma$$ is a closed curve in that disc, then
+
+$$\int_{\gamma} f(z)dz = 0.$$
+
+*Proof.* We will prove this by showing that $$f$$ has a primitive in that disc, which WLOG we assume to be centered at the origin. For any $$z_0$$ in the disc, let $$\gamma_{z_0}$$ be the polygonal path from 0 to $$z_0$$ where we first go horizontally to $$\Re(z_0)$$ then vertically to $$z_0$$. Now, define
+
+$$F(z_0) = \int_{\gamma_{z_0}} f(z)dz. $$
+
+Using Goursat's theorem and continuity of $$f$$, it is not difficult to show that $$F$$ is in fact a primitive of $$f$$ in the disc. The theorem then follows from Theorem 1.3. $$\square$$
+
+The same proof in fact holds for not just disks, but any contour whose notion of interior is obvious and in which it is easy to construct polygonal paths connecting any two points. Stein & Shakarchi calls them *toy contours*, an important example of which is the *keyhole contour* discussed in the next subsection. 
+
+An important class of applications of Cauchy's theorem is computing lots of definite integrals. Some examples:
+
+- For real $$\xi$$, 
+$$e^{-\pi \xi^2} = \int_{-\infty}^{\infty} e^{-\pi x^2}e^{-2\pi i x \xi}dx,$$
+i.e. $$e^{-\pi x^2}$$ is its own Fourier transform. (Integrate $$e^{-\pi z^2}$$ along the contour $$-R\to R\to R+i\xi \to -R+i\xi \to -R$$)
+
+- $$\int_0^{\infty} \frac{1-\cos x}{x^2} dx = \frac{\pi}{2}$$. (Integrate $$\frac{1-e^{iz}}{z^2}$$ along the indented semicircle with radii $$\epsilon\to 0$ and $R\to\infty$$)
+
+- Fresnel integerals:
+
+$$\int_0^{\infty} \sin(x^2)dx = \int_0^{\infty} \cos(x^2)dx =  \frac{\sqrt{2\pi}}{4}.$$
+
+(Integrate $$e^{-z^2}$$ along the sector with angle $$\frac{\pi}{4}$$ and radius $$R$$, then take $$R\to \infty$$)
+
+- $$\int_0^{\infty} \frac{\sin x}{x} = \frac{\pi}{2}$$. (Integrate $$\frac{e^{iz}-1}{z}$$ along the indented semicircle)
+
+
+### Cauchy's integral formulas
+
 
 [//]: # Jekyll requires blog post files to be named according to the following format:
 
