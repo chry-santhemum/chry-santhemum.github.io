@@ -270,7 +270,10 @@ $$\begin{equation} f^{(n)}(z_0) = \frac{n!}{2\pi i} \int_C \frac{f(z)}{(z-z_0)^{
 
 *Proof.* Induct on $$n$$. Suppose that we already have (2) for $$n-1$$. Then
 
-$$\frac{1}{h}(f^{n-1}(z_0+h) - f^{n-1}(z_0)) = \frac{(n-1)!}{2\pi i} \int_C \frac{f(z)}{h} \pr{\frac{1}{(z-z_0-h)^n} - \frac{1}{(z-z_0)^n}} dz.$$
+$$\begin{align*}
+\frac{1}{h}(f^{n-1}(z_0+h) - f^{n-1}(z_0)) &= \frac{(n-1)!}{2\pi i} \int_C \frac{f(z)}{h} \pr{\frac{1}{(z-z_0-h)^n} - \frac{1}{(z-z_0)^n}} dz \\
+&= blah blah
+\end{align*}$$
 
 [//]: # Jekyll requires blog post files to be named according to the following format:
 
