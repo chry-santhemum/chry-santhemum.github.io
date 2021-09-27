@@ -99,7 +99,8 @@ $$\newcommand{\diff}[2]{\frac{d #1}{d #2}}
 \newcommand{\abs}[1]{\left| #1 \right|}
 \newcommand{\pr}[1]{\left( #1 \right)}
 \newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
-\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}$$
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+\newcommand{\norm}[1]{\left\textbardbl #1 \right\textbardbl}$$
 
 ## Chapter 1: Preliminaries
 
@@ -256,15 +257,15 @@ $$\int_0^{\infty} \sin(x^2)dx = \int_0^{\infty} \cos(x^2)dx =  \frac{\sqrt{2\pi}
 
 ### Cauchy's integral formulas
 
-**Theorem 2.3.**  (Cauchy's integral formula) Let $$f$$ be holomorphic in an open set that contains the closure of some disc $$D$$. Then for any point $$z_0\in D$$,
+**Theorem 2.3.** Let $$f$$ be holomorphic in an open set that contains the closure of some disc $$D$$. Then for any point $$z_0\in D$$,
 
 $$f(z_0) = \frac{1}{2\pi i} \int_{\partial D} \frac{f(z)}{z-z_0} dz.$$
 
 *Sketch of proof.* Integrate along the keyhole contour and pass the width of the corridor and the inner circle to 0. $$\square$$
 
-An important and deep consequence of Cauchy's integeral formula:
+An important and deep consequence of Theorem 2.3:
 
-**Theorem 2.4.** If $$f$$ is holomorphic in an open $$\Omega$$, then it is infinitely complex differentiable in $$\Omega$$, and for any circle $$C\subset\Omega$$ whose interior is also in $$\Omega$$, for all $$z_0$$ inside $$C$$,
+**Theorem 2.4.** (Cauchy integral formula) If $$f$$ is holomorphic in an open $$\Omega$$, then it is infinitely complex differentiable in $$\Omega$$, and for any circle $$C\subset\Omega$$ whose interior is also in $$\Omega$$, for all $$z_0$$ inside $$C$$,
 
 $$\begin{equation} f^{(n)}(z_0) = \frac{n!}{2\pi i} \int_C \frac{f(z)}{(z-z_0)^{n+1}} dz. \tag{2} \end{equation}$$
 
@@ -272,8 +273,24 @@ $$\begin{equation} f^{(n)}(z_0) = \frac{n!}{2\pi i} \int_C \frac{f(z)}{(z-z_0)^{
 
 $$\begin{align*}
 \frac{1}{h}(f^{n-1}(z_0+h) - f^{n-1}(z_0)) &= \frac{(n-1)!}{2\pi i} \int_C \frac{f(z)}{h} \pr{\frac{1}{(z-z_0-h)^n} - \frac{1}{(z-z_0)^n}} dz \\
-&= blah blah
+&= \frac{(n-1)!}{2\pi i} \int_C \frac{f(z)}{(z-z_0-h)(z-z_0)} \pr{\frac{1}{(z-z_0-h)^{n-1}} + \dots + \frac{1}{(z-z_0)^{n-1}}} dz \\
+&\to \frac{(n-1)!}{2\pi i} \int_C \frac{f(z)}{(z-z_0)^2}\cdot\frac{n}{(z-z_0)^{n-1}} dz
+&= \frac{n!}{2\pi i} \int_C \frac{f(z)}{(z-z_0)^{n+1}} dz
 \end{align*}$$
+
+as $h\to 0$. $$\square$$
+
+As an easy corollary:
+
+**Theorem 2.5.** (Cauchy inequalities) Let $$f$$ be holomorphic in an open set containing the closure of a disc $$D$$ centered at $$z_0$$ and of radius $$R$$. Then
+
+$$\abs{f^{(n)}(z_0)}\le \frac{n! \norm{f}_C}{R^n},$$
+
+where $$\norm{f}_C = \sup_{z\in \partial D} \abs{f(z)}.$$
+
+Another deep theorem in complex analysis:
+
+
 
 [//]: # Jekyll requires blog post files to be named according to the following format:
 
