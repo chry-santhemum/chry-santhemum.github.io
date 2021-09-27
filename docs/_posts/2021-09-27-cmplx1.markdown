@@ -256,10 +256,21 @@ $$\int_0^{\infty} \sin(x^2)dx = \int_0^{\infty} \cos(x^2)dx =  \frac{\sqrt{2\pi}
 
 ### Cauchy's integral formulas
 
-Integrating along the keyhole contour and passing the width of the corridor and the inner circle to 0.
+**Theorem 2.3.**  (Cauchy's integral formula) Let $$f$$ be holomorphic in an open set that contains the closure of some disc $$D$$. Then for any point $$z_0\in D$$,
 
-**Theorem 2.3.**  (Cauchy's integral formula) 
+$$f(z_0) = \frac{1}{2\pi i} \int_{\partial D} \frac{f(z)}{z-z_0} dz.$$
 
+*Sketch of proof.* Integrate along the keyhole contour and pass the width of the corridor and the inner circle to 0. $$\square$$
+
+An important and deep consequence of Cauchy's integeral formula:
+
+**Theorem 2.4.** If $$f$$ is holomorphic in an open $$\Omega$$, then it is infinitely complex differentiable in $$\Omega$$, and for any circle $$C\subset\Omega$$ whose interior is also in $$\Omega$$, for all $$z_0$$ inside $$C$$,
+
+$$\begin{equation} f^{(n)}(z_0) = \frac{n!}{2\pi i} \int_C \frac{f(z)}{(z-z_0)^{n+1}} dz. \tag{2} \end{equation}$$
+
+*Proof.* Induct on $$n$$. Suppose that we already have (2) for $$n-1$$. Then
+
+$$\frac{1}{h}(f^{n-1}(z_0+h) - f^{n-1}(z_0)) = \frac{(n-1)!}{2\pi i} \int_C \frac{f(z)}{h} \pr{\frac{1}{(z-z_0-h)^n} - \frac{1}{(z-z_0)^n}} dz.$$
 
 [//]: # Jekyll requires blog post files to be named according to the following format:
 
