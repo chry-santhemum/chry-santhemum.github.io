@@ -274,11 +274,11 @@ $$\begin{equation} f^{(n)}(z_0) = \frac{n!}{2\pi i} \int_C \frac{f(z)}{(z-z_0)^{
 $$\begin{align*}
 \frac{1}{h}(f^{n-1}(z_0+h) - f^{n-1}(z_0)) &= \frac{(n-1)!}{2\pi i} \int_C \frac{f(z)}{h} \pr{\frac{1}{(z-z_0-h)^n} - \frac{1}{(z-z_0)^n}} dz \\
 &= \frac{(n-1)!}{2\pi i} \int_C \frac{f(z)}{(z-z_0-h)(z-z_0)} \pr{\frac{1}{(z-z_0-h)^{n-1}} + \dots + \frac{1}{(z-z_0)^{n-1}}} dz \\
-&\to \frac{(n-1)!}{2\pi i} \int_C \frac{f(z)}{(z-z_0)^2}\cdot\frac{n}{(z-z_0)^{n-1}} dz
+&\to \frac{(n-1)!}{2\pi i} \int_C \frac{f(z)}{(z-z_0)^2}\cdot\frac{n}{(z-z_0)^{n-1}} dz \\
 &= \frac{n!}{2\pi i} \int_C \frac{f(z)}{(z-z_0)^{n+1}} dz
 \end{align*}$$
 
-as $h\to 0$. $$\square$$
+as $$h\to 0$$. $$\square$$
 
 As an easy corollary:
 
@@ -287,9 +287,6 @@ As an easy corollary:
 $$\abs{f^{(n)}(z_0)}\le \frac{n! \norm{f}_C}{R^n},$$
 
 where $$\norm{f}_C = \sup_{z\in \partial D} \abs{f(z)}.$$
-
-Another deep theorem in complex analysis:
-
 
 
 [//]: # Jekyll requires blog post files to be named according to the following format:
