@@ -29,15 +29,14 @@ layout: default
     <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
   {%- endif -%}
   
-    <p id="visits"> This page has been visited
+    <div id="visits">
       <script>
       function cb(response) {
-          document.getElementById('visits').innerText = response.value;
+          document.getElementById('visits').innerText = "This page has been visited "response.value" times.";
       }
       </script>
       <script async src="https://api.countapi.xyz/hit/chry-santhemum.github.io/visits?callback=cb"></script>
-      times.
-    </p>
+    </div>
   </div>
 
 </div>
