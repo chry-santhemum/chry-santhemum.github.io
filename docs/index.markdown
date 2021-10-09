@@ -5,5 +5,4 @@
 layout: home
 ---
 
-
-fityffftfo
+This page has been 
