@@ -8,12 +8,15 @@ layout: default
   {%- endif -%}
 
   <div id="visits">
-      <script>
-      function cb(response) {
-          document.getElementById('visits').innerText = response.value;
-      }
-      </script>
-      <script async src="https://api.countapi.xyz/hit/chry-santhemum.github.io/visits?callback=cb"></script>
+      <p> This page has been visited
+          <script>
+          function cb(response) {
+              document.getElementById('visits').innerText = response.value;
+          }
+          </script>
+          <script async src="https://api.countapi.xyz/hit/chry-santhemum.github.io/visits?callback=cb"></script>
+          times.
+      </p>
   </div>
 
   {%- if site.posts.size > 0 -%}
