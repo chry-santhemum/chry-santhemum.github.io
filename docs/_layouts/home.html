@@ -7,18 +7,6 @@ layout: default
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
-  <div id="visits">
-      <p> This page has been visited
-          <script>
-          function cb(response) {
-              document.getElementById('visits').innerText = response.value;
-          }
-          </script>
-          <script async src="https://api.countapi.xyz/hit/chry-santhemum.github.io/visits?callback=cb"></script>
-          times.
-      </p>
-  </div>
-
   {%- if site.posts.size > 0 -%}
     <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
     <ul class="post-list">
@@ -40,5 +28,16 @@ layout: default
 
     <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
   {%- endif -%}
+  
+    <p id="visits"> This page has been visited
+      <script>
+      function cb(response) {
+          document.getElementById('visits').innerText = response.value;
+      }
+      </script>
+      <script async src="https://api.countapi.xyz/hit/chry-santhemum.github.io/visits?callback=cb"></script>
+      times.
+    </p>
+  </div>
 
 </div>
