@@ -29,12 +29,12 @@ layout: default
     <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
   {%- endif -%}
      
-     <script>
-     function cb(response) {
-         document.getElementById('visits').innerText = response.value;
-     }
-     </script>
-     <script async src="https://api.countapi.xyz/hit/chry-santhemum.github.io/visits?callback=cb"></script>
-    <p>This page got <span id="visits"></span> views.</p>
+    <script>
+    function cb(response) {
+        document.getElementById('visits').innerText = response.value;
+    }
+    </script>
+    <script async src="https://api.countapi.xyz/hit/chry-santhemum.github.io/visits?callback=cb"></script>
+    <div>This page has got <span id="visits"></span> views since October 9, 2021.</div>
 
 </div>
