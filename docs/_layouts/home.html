@@ -28,15 +28,7 @@ layout: default
 
     <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
   {%- endif -%}
-  
-    <div id="visits">
-      <script>
-      function cb(response) {
-          document.getElementById('visits').innerText = "This page has been visited "response.value" times.";
-      }
-      </script>
-      <script async src="https://api.countapi.xyz/hit/chry-santhemum.github.io/visits?callback=cb"></script>
-    </div>
-  </div>
+     
+    <p>This page got <span id="visits"></span> views.</p>
 
 </div>
