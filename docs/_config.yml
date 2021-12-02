@@ -19,11 +19,11 @@
 # in the templates via {{ site.myvariable }}.
 
 title: chry-santhemum
-author: Zifan Wang
+author: Atticus Wang
 email: zifanawang04@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  "I divide my time as follows: half the time I sleep, the other half I dream."
-  — Søren Kierkegaard
+  "Discovery is a child’s privilege."
+  — A. Grothendieck
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: vatbrainaxis

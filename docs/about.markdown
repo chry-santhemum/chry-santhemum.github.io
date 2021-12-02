@@ -4,12 +4,13 @@ title: About
 permalink: /about/
 ---
 
-This is the website of Zifan Wang (also known as Atticus),
-currently a high school senior studying at [PRISMS](https://prismsus.org). 
+This is the website of Atticus Wang. As of now, I am a high school senior studying at [PRISMS](https://prismsus.org). 
 
-Short bio: I enjoy math, classical and rock music, reading, basketball, Hollow Knight, philosophy, politics, ......
+Short bio: I enjoy math, classical and rock music, reading, writing, basketball, Hollow Knight, philosophy, politics, comedy, ......
 
 Expect more content from this site soon!
+
+<p> </p>
 
 > **Kublai Khan:** I do not know when you have had time to visit all the countries you describe to me. It seems to me you have never moved from this garden.
 >
