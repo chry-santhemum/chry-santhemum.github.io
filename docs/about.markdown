@@ -10,7 +10,7 @@ Short bio: I enjoy math, classical and rock music, reading, writing, basketball,
 
 Expect more content from this site soon!
 
-<p> </p>
+-----
 
 > **Kublai Khan:** I do not know when you have had time to visit all the countries you describe to me. It seems to me you have never moved from this garden.
 >
