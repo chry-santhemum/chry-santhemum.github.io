@@ -241,7 +241,7 @@ $$f(z_0) = \frac{1}{2\pi i} \int_{\partial D} \frac{f(z)}{z-z_0} dz.$$
 
 *Sketch of proof.* Integrate along the keyhole contour and pass the width of the corridor and the inner circle to 0. $$\square$$
 
-An important and deep consequence of Theorem 2.3:
+An important and deep consequence of the above theorem:
 
 **Theorem.** (Cauchy integral formula) If $$f$$ is holomorphic in an open $$\Omega$$, then it is infinitely complex differentiable in $$\Omega$$, and for any circle $$C\subset\Omega$$ whose interior is also in $$\Omega$$, for all $$z_0$$ inside $$C$$,
 
