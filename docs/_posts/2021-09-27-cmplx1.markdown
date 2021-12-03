@@ -157,11 +157,9 @@ then we must have that
 
 $$\abs{\int_{\gamma} f(z)dz} \le \abs{\gamma} \cdot \sup_{z\in\gamma} \abs{f(z)}.$$
 
-**Theorem.** If a continuous function $$f$$ has a primitive $$F$$ in $$\Omega$$, and $$\gamma$$ is a curve in $$\Omega$$ that begins at $$w_1$$ and ends at $$w_2$$, then
+**Theorem.** (Fundamental Theorem of Calculus) If a continuous function $$f$$ has a primitive $$F$$ in $$\Omega$$, and $$\gamma$$ is a curve in $$\Omega$$ that begins at $$w_1$$ and ends at $$w_2$$, then
 
 $$\int_{\gamma} f(z)dz = F(w_2) - F(w_1).$$
-
-This follows from its real analog (the fundamental theorem of calculus). 
 
 **Theorem.** If $$f$$ is holomorphic in a region $$\Omega$$ and $$f' = 0$$, then $$f$$ is constant.
 
@@ -212,7 +210,7 @@ $$\int_{\gamma} f(z)dz = 0.$$
 
 $$F(z_0) = \int_{\gamma_{z_0}} f(z)dz. $$
 
-Using Goursat's theorem and continuity of $$f$$, it is not difficult to show that $$F$$ is in fact a primitive of $$f$$ in the disc. The theorem then follows from Theorem 1.3. $$\square$$
+Using Goursat's theorem and continuity of $$f$$, it is not difficult to show that $$F$$ is in fact a primitive of $$f$$ in the disc. The theorem then follows from the Fundamental Theorem of Calculus. $$\square$$
 
 The same proof in fact holds for not just disks, but any contour whose notion of interior is obvious and in which it is easy to construct polygonal paths connecting any two points. Stein & Shakarchi calls them *toy contours*, an important example of which is the *keyhole contour* discussed in the next subsection. 
 
