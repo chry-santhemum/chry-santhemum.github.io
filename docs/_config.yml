@@ -18,16 +18,13 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: chry-santhemum
-author: Atticus Wang
-email: zifanawang04@gmail.com
+title: The Other Side
+author: AW
 description: >- # this means to ignore newlines until "baseurl:"
   "Discovery is a child’s privilege."
   — A. Grothendieck
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: vatbrainaxis
-facebook_username: zifan.wang.524
 
 # Build settings
 theme: minima

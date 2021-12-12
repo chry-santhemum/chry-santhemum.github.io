@@ -1,14 +1,10 @@
 ---
 layout: page
-title: About
+title: About Me
 permalink: /about/
 ---
 
-This is the website of Atticus Wang. As of now, I am a high school senior at [PRISMS](https://prismsus.org).
 
-Short bio: I enjoy math, classical and rock music, reading, writing, basketball, Hollow Knight, philosophy, politics, comedy, experimental cinema, ......
-
-Expect more content from this site soon.
 
 > **Kublai Khan:** I do not know when you have had time to visit all the countries you describe to me. It seems to me you have never moved from this garden.
 >
