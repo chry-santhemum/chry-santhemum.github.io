@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Mathematics
-permalink: /maths/
+title: Map
+permalink: /map/
 ---
 
 This area is still under construction.
