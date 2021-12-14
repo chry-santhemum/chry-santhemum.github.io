@@ -98,7 +98,7 @@ $$\newcommand{\diff}[2]{\frac{d #1}{d #2}}
 \newcommand{\norm}[1]{\| #1 \|}$$
 
 
-This fall (2021) I took Princeton University's MAT 216, or Multivatiable Analysis and Linear Algebra I. This was the first time I ever took an actual undergraduate-level math course. Our lecturer [Alan Chang](https://sites.google.com/view/alanchang) was extremely nice and very good at explaining things, which has the downside of making everything seem effortless and easy until it's you who actually does the work.
+This fall (2021) I took Princeton University's MAT 216, or Multivariable Analysis and Linear Algebra I. This was the first time I ever took an actual undergraduate-level math course. Our lecturer [Alan Chang](https://sites.google.com/view/alanchang) was extremely nice and very good at explaining things, which has the downside of making everything seem effortless and easy until it's you who actually does the work.
 
 The purpose of this post is to review interesting content I learned from that course. I wrote this mainly as a memory-refresher for myself; despite that, the reader would hopefully still find this post useful in life-threatening circumstances.
 
@@ -129,10 +129,9 @@ We should now explain how this theorem has anything to do with categories (with 
 
 For a Hausdorff space $$S$$ and a subset $$E\subset S$$, $$E$$ is of the *first (resp. second) category* if it is (resp. isn't) the union of countably many nowhere dense subsets. Then it is an easy corollary of BCT that a LCH space (e.g. $$\RR$$) is always a set of the second category (in itself). As an easy corollary of that, $$\QQ$$ is not the intersection of countably many open sets of $$\RR$$.
 
+We mention one striking application of BCT. It answers the following question: if a smooth function $$f: (0,1)\to \RR$$ satisfies that for any $$x\in (0,1)$$, there exists $$n$$ such that $$f^{(n)}(x) = 0$$, must $$f$$ be a polynomial? The reader should pause and think for a moment before looking at the solution below.
 
-We mention one striking application of BCT. It answers the following question: if a smooth function $$f: [0,1]\to \RR$$ satisfies that for any $$x\in [0,1]$$, there exists $$n$$ such that $$f^{(n)}(x) = 0$$, must $$f$$ be a polynomial? The reader should pause and think for a moment before looking at the solution below.
-
-*Solution to the problem:* Suppose $$f$$ is not a polynomial. Consider the union of all open intervals $$(a,b) \subset [0,1]$$ such that $$f\vert_{(a,b)}$$ is a polynomial. Let $$X$$ be the complement of this set. Then $$X$$ is a nonempty perfect set. Let $$S_n = \{x \in [0,1] \mid f^{(n)}(x) = 0\}$$, then each $$S_n$$ is closed, and the sets $$X\cap S_1, X\cap S_2, \dots$$ cover $$X$$. Because $$X$$ is LCH, we conclude one of $$X\cap S_n$$ is not nowhere dense, i.e. $$\bar{X\cap S_n} = X\cap S_n$$ contains $$X\cap (r,s)$$ for some open interval $$(r,s)$$. Since every point in $$X$$ is a limit point of $$X$$, we conclude $$f^m(x) = 0$$ for all $$x\in X\cap (r,s)$$ and $$m\ge n$$. On the other hand, consider any maximal interval in $$(R\backslash X)\cap (r,s)$$, and $$f^n(x)$$ must be zero on that interval as well. We conclude that $$f^n$$ is zero on $$(r,s)$$, so it is a polynomial on $$(r,s)$$. This contradicts the fact thst $$(r,s)\not\subset (R\backslash X)$$.
+*Solution to the problem:* Suppose $$f$$ is not a polynomial. Consider the union of all open intervals $$(a,b) \subset (0,1)$$ such that $$f\vert_{(a,b)}$$ is a polynomial. Let $$X$$ be the complement of this set. Then $$X$$ is a nonempty perfect set (in $$(0,1)$$). Let $$S_n = \{x \in (0,1) \mid f^{(n)}(x) = 0\}$$, then each $$S_n$$ is closed, and the sets $$X\cap S_1, X\cap S_2, \dots$$ cover $$X$$. Because $$X$$ is LCH, we conclude one of $$X\cap S_n$$ is not nowhere dense, i.e. $$\bar{X\cap S_n} = X\cap S_n$$ contains $$X\cap (r,s)$$ for some open interval $$(r,s)$$. Since every point in $$X$$ is a limit point of $$X$$, we conclude $$f^m(x) = 0$$ for all $$x\in X\cap (r,s)$$ and $$m\ge n$$. On the other hand, consider any maximal interval in $$(R\backslash X)\cap (r,s)$$, and $$f^n(x)$$ must be zero on that interval as well. We conclude that $$f^n$$ is zero on $$(r,s)$$, so it is a polynomial on $$(r,s)$$. This contradicts the fact thst $$(r,s)\not\subset (R\backslash X)$$.
 
 
 ## Arzelà-Ascoli
@@ -141,15 +140,16 @@ The Arzelà-Ascoli Theorem characterizes compact sets of continuous fucntions. R
 
 **Theorem (Arzelà-Ascoli).** Let $$\{f_n\}$$ be an infinite sequence of continuous functions between compact metric spaces $$S,T$$. If the set $$\{f_n\}$$ is uniformly equicontinuous, then $$\{f_n\}$$ has a subsequence that converges uniformly. 
 
-
 Conversely, any uniformly convergent sequence of functions is uniformly equicontinuous; this is easier and is left as an evercise to the reader. Anyways, to show Arzelà-Ascoli, we first pick a countable dense subset of $$S$$. To do this, fix a natural number $$n$$, and consider the open balls of radius $$1/n$$ around each point $$a\in S$$. Compactness reduces this to finitely many neighborhoods covering $$S$$, and suppose these neighborhoods were centered at points in a finite set $$A_n$$. Then taking the union of $$A_n$$ across all $$n$$, the resulting set is countable and dense. 
 
-Now, suppose this countable dense set consists of points $$a_1,a_2,\dots$$. The sequence $$f_n(a_1)$$ must have a convergent subsequence (by compactness of $$T$$); call the functions in subsequence $$f^1_1, f^1_2, f^1_3,\dots$$. The sequence $$f^1_1(a_2), f^1_2(a_2),\dots$$ again must have a convergent subsequence, and we call those functions $$f^2_1, f^2_2, f^2_3,\dots$$. So $$\{f^2_n\}$$ is a subsequence of $$f^1_n$$, which is a subsequence of $$f_n$$.
+Now, suppose this countable dense set consists of points $$a_1,a_2,\dots$$. The sequence $$f_n(a_1)$$ must have a convergent subsequence (by compactness of $$T$$); call the functions in the subsequence $$f^1_1, f^1_2, f^1_3,\dots$$ (those are indices, not powers). The sequence $$f^1_1(a_2), f^1_2(a_2),\dots$$ again must have a convergent subsequence, and we call those functions $$f^2_1, f^2_2, f^2_3,\dots$$. So $$\{f^2_n\}$$ is a subsequence of $$\{f^1_n\}$$, which is a subsequence of $$\{f_n\}$$.
 
 This process can be continued indefinitely, but it seems we can never reach a subsequence that converges at all the points $$a_1,a_2,\dots$$; after all, there are countably many. But now we can use a magic trick: take the diagonal elements $$g_n = f^n_n$$. Then for any fixed $$k$$, the sequence $$\{g_n(a_k)\}$$ converges.
 
 Finally, we show that the sequence $$\{g_n\}$$ is uniformly convergent on all of $$S$$. It suffices to show they are uniformly Cauchy (if you are not sure why this is true, prove it!). Pick any $$\eps$$. By uniform equicontinuity, there exists $$\delta$$ such that for any $$g_m$$ and any $$a,b\in S$$, $$\rho_S(a,b) < \delta$$ implies $$\rho_T(g_m(a), g_m(b)) < \eps/3$$. Consider the open balls centered at each $$a_k$$ with radius $$\delta$$. These cover $$S$$, and we may reduce it to a finite subcover over a finite set of $$a_k$$'s ($$k\in K$$). Because $$\{g_n(a_k)\}$$ is Cauchy for each of these $$k$$'s, we can take $$\delta$$ small enough to ensure $$\rho_T(g_m(x_k), g_n(x_k))$$ for $$m,n \ge N_k$$. So we can use the estimate
-\[\rho_T(g_m(x), g_n(x)) \le \rho_T(g_m(x), g_m(x_k)) + \rho_T(g_m(x_k), g_n(x_k)) + \rho_T(g_n(x_k), g_n(x)),\]
+
+$$\rho_T(g_m(x), g_n(x)) \le \rho_T(g_m(x), g_m(x_k)) + \rho_T(g_m(x_k), g_n(x_k)) + \rho_T(g_n(x_k), g_n(x)),$$
+
 and each of the terms on the right is less than $$\eps/3$$ for $$m,n \ge \max_{k\in K} N_k$$. This concludes the proof.
 
 Notice that the space of continuous functions between metric spaces is also a metric space under, for example, the $$L^{\infty}$$-norm; then Arzelà-Ascoli essentially says that a subset $$\mathcal{F}$$ of that function space is compact provided that it is equicontinuous. (For functions to thing like $$\RR$$ which is not compact, you also need a uniform boundedness contition to ensure the compactness of $$\mathcal{F}$$.)
@@ -157,7 +157,23 @@ Notice that the space of continuous functions between metric spaces is also a me
 
 ## Fundamental Theorem of Algebra
 
-This is mainly a low-tech proof for the Fundamental Theorem of Algebra. 
+This is a low-tech proof for the Fundamental Theorem of Algebra. Suppose $$P(z)$$ is a complex polynomial with degree $$n>0$$ and no roots, i.e. $$|P(z)|>0$$ for all $$z\in\CC$$. For $$|z|$$ sufficiently large (say $$|z|\ge R$$ for some large real $$R$$), we always have $$|P(z)| > |P(0)|$$, which means that the minimum of $$|P(z)|$$ on the disk $$|z|\le R$$ occurs at $$z_0$$ in the interior of the disk. Write
+
+$$P(z) = \sum_{m=0}^n b_m(z-z_0)^m$$
+
+and let $$b_k(z-z_0)^k$$ be the smallest nonzero term (apart from $$b_0 = P(z_0) \neq 0$$). Then for $$z$$ sufficiently close to $$z_0$$,
+
+$$|P(z)| \le |b_0 + b_k(z-z_0)^k| + M|z-z_0|^{k+1}$$
+
+for a fixed constant $$M$$. In particular, we take $$z-z_0 = t\zeta$$ where $$t$$ is a small real number and $$\zeta^k = -b_0/b_k$$. Then we conclude that
+
+$$|P(z_0 + t\zeta)| \le |b_0|(1-t^k) + M|\zeta|^{k+1}t^{k+1} = |b_0| - |b_0|t^k(1 - M|\zeta|^{k+1}t/|b_0|)$$.
+
+This is smaller than $$|P(z_0)|$$ when $$t$$ is sufficiently small, which is a contradiction.
+
+
+
 
 ## Stone-Weierstrass Theorem
 
+This is an exciting one since it's so unexpected. Consider 
