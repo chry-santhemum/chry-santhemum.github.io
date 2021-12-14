@@ -111,7 +111,7 @@ This theorem has always been really scary for me, because the word "category" re
 
 We say a topological space is *Baire* if for each countable collection of dense open sets $$\{E_1, E_2, E_3,\dots \}$$, their intersection $$\bigcap_n E_n$$ is dense. The Baire Category Theorem (BCT) is often stated in two parts:
 
-**Theorem.** Any locally compact Hausdorff space is Baire. Any complete pseudometric space is Baire.
+**Theorem (Baire Category Theorem).** Any locally compact Hausdorff space is Baire. Any complete pseudometric space is Baire.
 
 *Proof.* We prove the first sentence. First, recall a lemma about locally compact Hausdorff (LCH) spaces:
 
@@ -135,9 +135,29 @@ We mention one striking application of BCT. It answers the following question: i
 *Solution to the problem:* Suppose $$f$$ is not a polynomial. Consider the union of all open intervals $$(a,b) \subset [0,1]$$ such that $$f\vert_{(a,b)}$$ is a polynomial. Let $$X$$ be the complement of this set. Then $$X$$ is a nonempty perfect set. Let $$S_n = \{x \in [0,1] \mid f^{(n)}(x) = 0\}$$, then each $$S_n$$ is closed, and the sets $$X\cap S_1, X\cap S_2, \dots$$ cover $$X$$. Because $$X$$ is LCH, we conclude one of $$X\cap S_n$$ is not nowhere dense, i.e. $$\bar{X\cap S_n} = X\cap S_n$$ contains $$X\cap (r,s)$$ for some open interval $$(r,s)$$. Since every point in $$X$$ is a limit point of $$X$$, we conclude $$f^m(x) = 0$$ for all $$x\in X\cap (r,s)$$ and $$m\ge n$$. On the other hand, consider any maximal interval in $$(R\backslash X)\cap (r,s)$$, and $$f^n(x)$$ must be zero on that interval as well. We conclude that $$f^n$$ is zero on $$(r,s)$$, so it is a polynomial on $$(r,s)$$. This contradicts the fact thst $$(r,s)\not\subset (R\backslash X)$$.
 
 
-## Arzela-Ascoli
+## Arzelà-Ascoli
+
+The Arzelà-Ascoli Theorem characterizes compact sets of continuous fucntions. Recall that a family $$\mathcal{F}$$ of functions between metric spaces $$(S,\rho_S)\to (T,\rho_T)$$ is called *uniformly equicontinuous* if for any $$\eps>0$$ there exists $$\delta>0$$ such that $$\rho_S(x,y) < \delta$$ implies $$\rho_T(f(x),f(y)) < \eps$$ for any $$x,y\in S$$ and any $$f\in \mathcal{F}$$.
+
+**Theorem (Arzelà-Ascoli).** Let $$\{f_n\}$$ be an infinite sequence of continuous functions between compact metric spaces $$S,T$$. If the set $$\{f_n\}$$ is uniformly equicontinuous, then $$\{f_n\}$$ has a subsequence that converges uniformly. 
+
+
+Conversely, any uniformly convergent sequence of functions is uniformly equicontinuous; this is easier and is left as an evercise to the reader. Anyways, to show Arzelà-Ascoli, we first pick a countable dense subset of $$S$$. To do this, fix a natural number $$n$$, and consider the open balls of radius $$1/n$$ around each point $$a\in S$$. Compactness reduces this to finitely many neighborhoods covering $$S$$, and suppose these neighborhoods were centered at points in a finite set $$A_n$$. Then taking the union of $$A_n$$ across all $$n$$, the resulting set is countable and dense. 
+
+Now, suppose this countable dense set consists of points $$a_1,a_2,\dots$$. The sequence $$f_n(a_1)$$ must have a convergent subsequence (by compactness of $$T$$); call the functions in subsequence $$f^1_1, f^1_2, f^1_3,\dots$$. The sequence $$f^1_1(a_2), f^1_2(a_2),\dots$$ again must have a convergent subsequence, and we call those functions $$f^2_1, f^2_2, f^2_3,\dots$$. So $$\{f^2_n\}$$ is a subsequence of $$f^1_n$$, which is a subsequence of $$f_n$$.
+
+This process can be continued indefinitely, but it seems we can never reach a subsequence that converges at all the points $$a_1,a_2,\dots$$; after all, there are countably many. But now we can use a magic trick: take the diagonal elements $$g_n = f^n_n$$. Then for any fixed $$k$$, the sequence $$\{g_n(a_k)\}$$ converges.
+
+Finally, we show that the sequence $$\{g_n\}$$ is uniformly convergent on all of $$S$$. It suffices to show they are uniformly Cauchy (if you are not sure why this is true, prove it!). Pick any $$\eps$$. By uniform equicontinuity, there exists $$\delta$$ such that for any $$g_m$$ and any $$a,b\in S$$, $$\rho_S(a,b) < \delta$$ implies $$\rho_T(g_m(a), g_m(b)) < \eps/3$$. Consider the open balls centered at each $$a_k$$ with radius $$\delta$$. These cover $$S$$, and we may reduce it to a finite subcover over a finite set of $$a_k$$'s ($$k\in K$$). Because $$\{g_n(a_k)\}$$ is Cauchy for each of these $$k$$'s, we can take $$\delta$$ small enough to ensure $$\rho_T(g_m(x_k), g_n(x_k))$$ for $$m,n \ge N_k$$. So we can use the estimate
+\[\rho_T(g_m(x), g_n(x)) \le \rho_T(g_m(x), g_m(x_k)) + \rho_T(g_m(x_k), g_n(x_k)) + \rho_T(g_n(x_k), g_n(x)),\]
+and each of the terms on the right is less than $$\eps/3$$ for $$m,n \ge \max_{k\in K} N_k$$. This concludes the proof.
+
+Notice that the space of continuous functions between metric spaces is also a metric space under, for example, the $$L^{\infty}$$-norm; then Arzelà-Ascoli essentially says that a subset $$\mathcal{F}$$ of that function space is compact provided that it is equicontinuous. (For functions to thing like $$\RR$$ which is not compact, you also need a uniform boundedness contition to ensure the compactness of $$\mathcal{F}$$.)
+
 
 ## Fundamental Theorem of Algebra
+
+This is mainly a low-tech proof for the Fundamental Theorem of Algebra. 
 
 ## Stone-Weierstrass Theorem
 
