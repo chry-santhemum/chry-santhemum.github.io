@@ -102,7 +102,7 @@ This fall (2021) I took Princeton University's MAT 216, or Multivatiable Analysi
 
 The purpose of this post is to review interesting content I learned from that course. I wrote this mainly as a memory-refresher for myself; despite that, the reader would hopefully still find this post useful in life-threatening circumstances.
 
-In this post, $$\subset$$ means "is a (**not necessarily proper**) subset of".
+In this post, $$\subset$$ means "is a (*not necessarily proper*) subset of".
 
 
 ## Baire Category Theorem
@@ -130,14 +130,10 @@ We should now explain how this theorem has anything to do with categories (with 
 For a Hausdorff space $$S$$ and a subset $$E\subset S$$, $$E$$ is of the *first (resp. second) category* if it is (resp. isn't) the union of countably many nowhere dense subsets. Then it is an easy corollary of BCT that a LCH space (e.g. $$\RR$$) is always a set of the second category (in itself). As an easy corollary of that, $$\QQ$$ is not the intersection of countably many open sets of $$\RR$$.
 
 
-We mention one striking application of BCT. It answers the following question: if a smooth function $$f: [0,1]\to \RR$$ satisfies that for any $$x\in [0,1]$$, there exists $$n$$ such that $$f^{(n)}(x) = 0$$, must $$f$$ be a polynomial?
+We mention one striking application of BCT. It answers the following question: if a smooth function $$f: [0,1]\to \RR$$ satisfies that for any $$x\in [0,1]$$, there exists $$n$$ such that $$f^{(n)}(x) = 0$$, must $$f$$ be a polynomial? The reader should pause and think for a moment before looking at the solution below.
 
-<details>
-<summary>View solution</summary>
-<p> 
-Suppose $$f$$ is not a polynomial. Consider the union of all open intervals $$(a,b) \subset [0,1]$$ such that $$f|_{(a,b)}$$ is a polynomial. Let $$X$$ be the complement of this set. Then $$X$$ is a nonempty perfect set. Let $$S_n = \{x \in [0,1] \mid f^{(n)}(x) = 0\}$$, then each $$S_n$$ is closed, and the sets $$X\cap S_1, X\cap S_2, \dots$$ cover $$X$$. Because $$X$$ is LCH, we conclude one of $$X\cap S_n$$ is not nowhere dense, i.e. $$\bar{X\cap S_n} = X\cap S_n$$ contains $$X\cap (r,s)$$ for some open interval $$(r,s)$$. Since every point in $$X$$ is a limit point of $$X$$, we conclude $$f^m(x) = 0$$ for all $$x\in X\cap (r,s)$$ and $$m\ge n$$. On the other hand, consider any maximal interval in $$(R\backslash X)\cap (r,s)$$, and $$f^n(x)$$ must be zero on that interval as well. We conclude that $$f^n$$ is zero on $$(r,s)$$, so it is a polynomial on $$(r,s)$$. This contradicts the fact thst $$(r,s)\not\subset (R\backslash X)$$.
-</p>
-</details>
+
+*Solution to the problem:* Suppose $$f$$ is not a polynomial. Consider the union of all open intervals $$(a,b) \subset [0,1]$$ such that $$f|_{(a,b)}$$ is a polynomial. Let $$X$$ be the complement of this set. Then $$X$$ is a nonempty perfect set. Let $$S_n = \{x \in [0,1] \mid f^{(n)}(x) = 0\}$$, then each $$S_n$$ is closed, and the sets $$X\cap S_1, X\cap S_2, \dots$$ cover $$X$$. Because $$X$$ is LCH, we conclude one of $$X\cap S_n$$ is not nowhere dense, i.e. $$\bar{X\cap S_n} = X\cap S_n$$ contains $$X\cap (r,s)$$ for some open interval $$(r,s)$$. Since every point in $$X$$ is a limit point of $$X$$, we conclude $$f^m(x) = 0$$ for all $$x\in X\cap (r,s)$$ and $$m\ge n$$. On the other hand, consider any maximal interval in $$(R\backslash X)\cap (r,s)$$, and $$f^n(x)$$ must be zero on that interval as well. We conclude that $$f^n$$ is zero on $$(r,s)$$, so it is a polynomial on $$(r,s)$$. This contradicts the fact thst $$(r,s)\not\subset (R\backslash X)$$.
 
 
 ## Arzela-Ascoli
