@@ -91,7 +91,7 @@ $$\newcommand{\diff}[2]{\frac{d #1}{d #2}}
 \newcommand{\SG}{\mathscr{G}}
 \newcommand{\scr}[1]{\mathscr{#1}}
 \newcommand{\frk}[1]{\mathfrak{#1}}
-\newcommand{\abs}[1]{\left| #1 \right|}
+\newcommand{\abs}[1]{\left\vert #1 \right\vert}
 \newcommand{\pr}[1]{\left( #1 \right)}
 \newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
 \newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
@@ -157,19 +157,19 @@ Notice that the space of continuous functions between metric spaces is also a me
 
 ## Fundamental Theorem of Algebra
 
-This is a low-tech proof for the Fundamental Theorem of Algebra. Suppose $$P(z)$$ is a complex polynomial with degree $$n>0$$ and no roots, i.e. $$|P(z)|>0$$ for all $$z\in\CC$$. For $$|z|$$ sufficiently large (say $$|z|\ge R$$ for some large real $$R$$), we always have $$|P(z)| > |P(0)|$$, which means that the minimum of $$|P(z)|$$ on the disk $$|z|\le R$$ occurs at $$z_0$$ in the interior of the disk. Write
+This is a low-tech proof for the Fundamental Theorem of Algebra. Suppose $$P(z)$$ is a complex polynomial with degree $$n>0$$ and no roots, i.e. $$\vertP(z)\vert>0$$ for all $$z\in\CC$$. For $$\vertz\vert$$ sufficiently large (say $$\vertz\vert\ge R$$ for some large real $$R$$), we always have $$\vertP(z)\vert > \vertP(0)\vert$$, which means that the minimum of $$\vertP(z)\vert$$ on the disk $$\vertz\vert\le R$$ occurs at $$z_0$$ in the interior of the disk. Write
 
 $$P(z) = \sum_{m=0}^n b_m(z-z_0)^m$$
 
 and let $$b_k(z-z_0)^k$$ be the smallest nonzero term (apart from $$b_0 = P(z_0) \neq 0$$). Then for $$z$$ sufficiently close to $$z_0$$,
 
-$$|P(z)| \le |b_0 + b_k(z-z_0)^k| + M|z-z_0|^{k+1}$$
+$$\vertP(z)\vert \le \vertb_0 + b_k(z-z_0)^k\vert + M\vertz-z_0\vert^{k+1}$$
 
 for a fixed constant $$M$$. In particular, we take $$z-z_0 = t\zeta$$ where $$t$$ is a small real number and $$\zeta^k = -b_0/b_k$$. Then we conclude that
 
-$$|P(z_0 + t\zeta)| \le |b_0|(1-t^k) + M|\zeta|^{k+1}t^{k+1} = |b_0| - |b_0|t^k(1 - M|\zeta|^{k+1}t/|b_0|)$$.
+$$\vertP(z_0 + t\zeta)\vert \le \vertb_0\vert(1-t^k) + M\vert\zeta\vert^{k+1}t^{k+1} = \vertb_0\vert - \vertb_0\vertt^k(1 - M\vert\zeta\vert^{k+1}t/\vertb_0\vert)$$.
 
-This is smaller than $$|P(z_0)|$$ when $$t$$ is sufficiently small, which is a contradiction.
+This is smaller than $$\vertP(z_0)\vert$$ when $$t$$ is sufficiently small, which is a contradiction.
 
 
 
