@@ -13,4 +13,4 @@ You look at the menu on the wall. You're slightly disappointed to discover that 
 
 Now with the caffeine circulating in your blood, you feel considerably more invigorated. It's getting dark outside, and why not stay a little longer? More people are shuffling in from both ends of the corridor, looking somewhat happy and excited. It's the anticipation that matters, the hope that there's always a tiny possibility for things to get better. 
 
-The barista is announcing the arrival of some Very Important guests, apparently a dance troupe coming all the way from $\tau$ Ceti. He hopes you enjoy their performances tonight.
+The barista is announcing the arrival of some Very Important guests, apparently a dance troupe coming all the way from $$\tau$$ Ceti. He hopes you enjoy their performances tonight.
