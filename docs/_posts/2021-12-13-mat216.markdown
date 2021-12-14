@@ -157,7 +157,7 @@ Notice that the space of continuous functions between metric spaces is also a me
 
 ## Fundamental Theorem of Algebra
 
-This is a low-tech proof for the Fundamental Theorem of Algebra. Suppose $$P(z)$$ is a complex polynomial with degree $$n>0$$ and no roots, i.e. $$\vert P(z)\vert >0$$ for all $$z\in\CC$$. For $$\vert z\vert $$ sufficiently large (say $$\vert z\vert \ge R$$ for some large real $$R$$), we always have $$\vert P(z)\vert  > \vert P(0)\vert $$, which means that the minimum of $$\vert P(z)\vert $$ on the disk $$\vert z\vert \le R$$ occurs at $$z_0$$ in the interior of the disk. Write
+This is a low-tech proof for the **Fundamental Theorem of Algebra**. Suppose $$P(z)$$ is a complex polynomial with degree $$n>0$$ and no roots, i.e. $$\vert P(z)\vert >0$$ for all $$z\in\CC$$. For $$\vert z\vert $$ sufficiently large (say $$\vert z\vert \ge R$$ for some large real $$R$$), we always have $$\vert P(z)\vert  > \vert P(0)\vert $$, which means that the minimum of $$\vert P(z)\vert $$ on the disk $$\vert z\vert \le R$$ occurs at $$z_0$$ in the interior of the disk. Write
 
 $$P(z) = \sum_{m=0}^n b_m(z-z_0)^m$$
 
@@ -167,13 +167,42 @@ $$\vert P(z)\vert  \le \vert b_0 + b_k(z-z_0)^k\vert  + M\vert z-z_0\vert ^{k+1}
 
 for a fixed constant $$M$$. In particular, we take $$z-z_0 = t\zeta$$ where $$t$$ is a small real number and $$\zeta^k = -b_0/b_k$$. Then we conclude that
 
-$$\vert P(z_0 + t\zeta)\vert  \le \vert b_0\vert (1-t^k) + M\vert \zeta\vert ^{k+1}t^{k+1} = \vert b_0\vert  - \vert b_0\vert t^k(1 - M\vert \zeta\vert ^{k+1}t/\vert b_0\vert )$$.
+$$\vert P(z_0 + t\zeta)\vert  \le \vert b_0\vert (1-t^k) + M\vert \zeta\vert ^{k+1}t^{k+1} = \vert b_0\vert  - \vert b_0\vert t^k(1 - M\vert \zeta\vert ^{k+1}t/\vert b_0\vert ).$$
 
 This is smaller than $$\vert P(z_0)\vert $$ when $$t$$ is sufficiently small, which is a contradiction.
 
 
-
-
 ## Stone-Weierstrass Theorem
 
-This is an exciting one since it's so unexpected. Consider 
+This is an exciting one since it's so unexpected. The classical Weierstrass approximation theorem says that any continuous function (not necessarily differentiable!) on a closed interval can be uniformly approximated by polynomials. The Stone-Weierstrass Theorem generalizes this to continuous functions from any compact topological space $$S$$ to reals.
+
+Denote by $$C(S)$$ the space of continuous functions $$S\to \RR$$. This is a complete normed space when equipped with the $$L^{\infty}$$ norm. A subset $$\mathscr{A}\subset C(S)$$ is called a *function algebra* if it is an algebra of functions (i.e. closed under $$+$$, scalar multiplication, $$\times$$, and contains the constant function 1). Furthermore, we say it *separates points* if for any $$a\neq b$$ in $$S$$, there exists $$f\in \mathscr{A}$$ such that $$f(a) \neq f(b)$$.
+
+**Theorem (Stone-Weierstrass).** If $$S$$ is compact, $$\mathscr{A} \subset C(S)$$ is a real function algebra that separates points, then $$\bar{\mathscr{A}} = C(S)$$. 
+
+We make a sequence of preliminary observations. 
+
+1. We recall that $$\vert x\vert $$ can be approximated uniformly in $$[-1,1]$$ using polynomials. This is because we can approximate $$\sqrt{1-t}$$ using partial sums of its Taylor expansion, and substituting $$t = 1-x^2$$ gives approximations to $$\vert x\vert $$. 
+
+2. If $$f\in \bar{\mathscr{A}}$$, then $$\vert f\vert  \in \bar{\mathscr{A}}$$ as well. This is because there exists $$M$$ such that $$\vert f(x)\vert  \le M$$ for all $$x$$, and using the last observation we can find polynomials $$p$$ such that $$p(f(x))$$ approximate $$\vert f(x)\vert $$. We then observe that $$pf\in\bar{\mathscr{A}}$$ because $$\mathscr{A}$$ is a function algebra. Therefore, $$\vert f\vert  \in \bar{\bar{\mathscr{A}}} = \bar{\mathscr{A}}$$.
+
+3. If $$f,g\in\bar{\mathscr{A}}$$, then $$\max(f,g)$$ and $$\min(f,g)$$ both belong to $$\bar{\mathscr{A}}$$. This is because $$\max(f,g) = (f+g+\vert f-g\vert )/2$$ and $$\min(f,g) = (f+g-\vert f-g\vert )/2$$.
+
+4. For any $$a\neq b\in S$$, $$c,d\in\RR$$, there exists $$f\in\mathscr{A}$$ such that $$f(a) = c$$, $$f(b) = d$$. This is because there exists $$g$$ where $$g(a)\neq g(b)$$, and some $$\lambda + \mu g$$ satisfies the condition.
+
+Now we prove the theorem. Consider any $$h\in C(S)$$ (this is the function we want to approximate), and fix any $$\eps>0$$. For any $$a\neq b$$ in $$S$$, write $$f_{ab} \in \mathscr{A}$$ as a function such that $$f_{ab}(a) = h(a)$$ and $$f_{ab}(b) = h(b)$$.
+
+Fix $$a\in S$$. Because $$f_{ab}(b) = h(b)$$, there exists a neighborhood $$N_b$$ of $$b$$ such that $$\vert f_{ab}(x) - h(x)\vert  < \eps$$ for any $$x\in N_b$$. Reduce these to a finite cover $$N_{b_i}$$. Let 
+
+$$f_a(x) = \max_{i} f_{ab_i}(x).$$
+
+Then $$f_a(x) \in \bar{\mathscr{A}}$$ by previous observations, and $$f_a(x) \ge h(x) - \eps$$. Now, because $$f_a(a) = h(a)$$, there exists a neighborhood $$N_a$$ of $$a$$ such that $$\vert f_a(x) - h(x)\vert  < \eps$$ for any $$x\in N_a$$. Reduce these to a finite cover $$N_{a_j}$$. We let
+
+$$f(x) = \min_{j} f_{a_j}(x),$$
+
+then $$f\in\bar{\mathscr{A}}$$, and
+
+$$h(x) - \eps < f(x) < h(x) + \eps.$$
+
+This is sufficient to imply the theorem.
+
