@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+usemathjax: true
 ---
 
 You just arrived at an inconspicuous coffee shop on the corner of a rarely-visited street. The sign above the entrance says "The Lost Café". You're not quite sure where this is, as it's pretty clear you've strayed too far away from your destination. But being the curious cat that you are, you decide to take a brief look inside.
@@ -12,4 +13,4 @@ You look at the menu on the wall. You're slightly disappointed to discover that 
 
 Now with the caffeine circulating in your blood, you feel considerably more invigorated. It's getting dark outside, and why not stay a little longer? More people are shuffling in from both ends of the corridor, looking somewhat happy and excited. It's the anticipation that matters, the hope that there's always a tiny possibility for things to get better. 
 
-The barista is announcing the arrival of some Very Important guests, apparently a band of some sort. He hopes you enjoy their performance tonight.
+The barista is announcing the arrival of some Very Important guests, apparently a dance troupe coming all the way from $\tau$ Ceti. He hopes you enjoy their performances tonight.
