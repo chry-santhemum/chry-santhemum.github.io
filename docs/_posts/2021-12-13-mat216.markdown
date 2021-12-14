@@ -6,7 +6,7 @@ categories: mathematics
 usemathjax: true
 ---
 
-$\newcommand{\diff}[2]{\frac{d #1}{d #2}}
+$$\newcommand{\diff}[2]{\frac{d #1}{d #2}}
 \newcommand{\pard}[2]{\frac{\partial #1}{\partial #2}}
 \newcommand{\exist}{\exists\thinspace}
 \newcommand{\all}{\forall\thinspace}
@@ -95,47 +95,47 @@ $\newcommand{\diff}[2]{\frac{d #1}{d #2}}
 \newcommand{\pr}[1]{\left( #1 \right)}
 \newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
 \newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
-\newcommand{\norm}[1]{\| #1 \|}$
+\newcommand{\norm}[1]{\| #1 \|}$$
 
 
 This fall (2021) I took Princeton University's MAT 216, or Multivatiable Analysis and Linear Algebra I. This was the first time I ever took an actual undergraduate-level math course. Our lecturer [Alan Chang](https://sites.google.com/view/alanchang) was extremely nice and very good at explaining things, which has the downside of making everything seem effortless and easy until it's you who actually does the work.
 
 The purpose of this post is to review interesting content I learned from that course. I wrote this mainly as a memory-refresher for myself; despite that, the reader would hopefully still find this post useful in life-threatening circumstances.
 
-In this post, $\subset$ means "is a (**not necessarily proper**) subset of".
+In this post, $$\subset$$ means "is a (**not necessarily proper**) subset of".
 
 
 ## Baire Category Theorem
 
-This theorem has always been really scary for me, because the word "category" reminds me of my constant terror when learning category theory. This theorem has absolutely nothing to do with that monster. Recall that a topological space $S$ is *locally compact* if for any point $a\in S$, there exists a compact set $K\subset S$ such that $a$ lies in the interior of $K$. Also, a *pseudometric space* is just a metric space where you allow the distance of two distinct points to be zero. 
+This theorem has always been really scary for me, because the word "category" reminds me of my constant terror when learning category theory. This theorem has absolutely nothing to do with that monster. Recall that a topological space $$S$$ is *locally compact* if for any point $$a\in S$$, there exists a compact set $$K\subset S$$ such that $$a$$ lies in the interior of $$K$$. Also, a *pseudometric space* is just a metric space where you allow the distance of two distinct points to be zero. 
 
-We say a topological space is *Baire* if for each countable collection of dense open sets $\{E_1, E_2, E_3,\dots \}$, their intersection $\bigcap_n E_n$ is dense. The Baire Category Theorem (BCT) is often stated in two parts:
+We say a topological space is *Baire* if for each countable collection of dense open sets $$\{E_1, E_2, E_3,\dots \}$$, their intersection $$\bigcap_n E_n$$ is dense. The Baire Category Theorem (BCT) is often stated in two parts:
 
 **Theorem.** Any locally compact Hausdorff space is Baire. Any complete pseudometric space is Baire.
 
 *Proof.* We prove the first sentence. First, recall a lemma about locally compact Hausdorff (LCH) spaces:
 
-> Lemma: If $S$ is LCH, then for any point $a\in S$ and any open neighborhood $U$ of $a$, there exists an open $V$ such that $a\in V \subset \overline{V} \subset U$ and $\overline{V}$ is compact.
+> Lemma: If $$S$$ is LCH, then for any point $$a\in S$$ and any open neighborhood $$U$$ of $$a$$, there exists an open $$V$$ such that $$a\in V \subset \overline{V} \subset U$$ and $$\overline{V}$$ is compact.
 
-To prove this lemma, first take a compact set $K$ containing $a$ in its interior. Then $\operatorname{int}(K) \cap U$ is an open set containing $a$. The boundary of that set is closed, and is disjoint from the closed set $\{a\}$; because $S$ is Hausdorff, there must exist disjoint open sets $X,W$ respectively containing $\{a\}$ and $\partial(\operatorname{int}(K) \cap U)$. We let $V = X\cap \operatorname{int}(K) \cap U$, then $\overline{V}$ lies inside $U\cap \operatorname{int}(K)$. Since $\overline{V}$ a closed subset of a compact set, it is compact as well. This proves the lemma.
+To prove this lemma, first take a compact set $$K$$ containing $$a$$ in its interior. Then $$\operatorname{int}(K) \cap U$$ is an open set containing $$a$$. The boundary of that set is closed, and is disjoint from the closed set $$\{a\}$$; because $$S$$ is Hausdorff, there must exist disjoint open sets $$X,W$$ respectively containing $$\{a\}$$ and $$\partial(\operatorname{int}(K) \cap U)$$. We let $$V = X\cap \operatorname{int}(K) \cap U$$, then $$\overline{V}$$ lies inside $$U\cap \operatorname{int}(K)$$. Since $$\overline{V}$$ a closed subset of a compact set, it is compact as well. This proves the lemma.
 
-Back to the theorem, take any open set $U$ inside a LCH space $S$, as well as a countable set of dense open sets $E_1,E_2,E_3,\dots$. The goal is to show that $U\cap (\bigcap_n E_n)$ is nonempty. Take $a_1\in (U\cap E_1)$, and according to the above lemma, take an open neighborhood $U_1\subset \overline{U_1} \subset (U\cap E_1)$, such that $\overline{U_1}$ is compact. We now essentially repeat this procedure with $U_1$: take $a_2\in (U_1\cap E_2)$, and take an open neighborhood $U_2\subset \overline{U_2} \subset (U_1\cap E_2)$, such that $\overline{U_2}$ is compact. 
+Back to the theorem, take any open set $$U$$ inside a LCH space $$S$$, as well as a countable set of dense open sets $$E_1,E_2,E_3,\dots$$. The goal is to show that $$U\cap (\bigcap_n E_n)$$ is nonempty. Take $$a_1\in (U\cap E_1)$$, and according to the above lemma, take an open neighborhood $$U_1\subset \overline{U_1} \subset (U\cap E_1)$$, such that $$\overline{U_1}$$ is compact. We now essentially repeat this procedure with $$U_1$$: take $$a_2\in (U_1\cap E_2)$$, and take an open neighborhood $$U_2\subset \overline{U_2} \subset (U_1\cap E_2)$$, such that $$\overline{U_2}$$ is compact. 
 
-We repeat this with $U_2,U_3,\dots$ (formally, we would use induction to find $U_n$). Now observe that $\bar{U_1}\supset \bar{U_2}\supset \bar{U_3}\dots$ form a descending chain of compact sets, so by Cantor's intersection theorem $\bigcap_n \bar{U_n}$ is nonempty. Say $a$ lies in this set. Then since $\bar{U_n}\subset (U\cap E_n)$, $a$ belongs to all of $E_n$ and $U$. This completes the proof.
+We repeat this with $$U_2,U_3,\dots$$ (formally, we would use induction to find $$U_n$$). Now observe that $$\bar{U_1}\supset \bar{U_2}\supset \bar{U_3}\dots$$ form a descending chain of compact sets, so by Cantor's intersection theorem $$\bigcap_n \bar{U_n}$$ is nonempty. Say $$a$$ lies in this set. Then since $$\bar{U_n}\subset (U\cap E_n)$$, $$a$$ belongs to all of $$E_n$$ and $$U$$. This completes the proof.
 
-For complete pseudometric spaces, one would replace $U_n$ with open balls of radii converging to 0, and replace Cantor's intersection theorem with an application of completeness. The reader should verify the details; for example, one should see that $\bar{U_n}$ should correspond to closed balls instead of the closure of open balls, and that the two are not the same.
+For complete pseudometric spaces, one would replace $$U_n$$ with open balls of radii converging to 0, and replace Cantor's intersection theorem with an application of completeness. The reader should verify the details; for example, one should see that $$\bar{U_n}$$ should correspond to closed balls instead of the closure of open balls, and that the two are not the same.
 
-We should now explain how this theorem has anything to do with categories (with the word's colloquial, muggle-friendly meaning). For a space $S$ and a subset $E\subset S$, $E$ is called *nowhere dense* if $\operatorname{int}(\bar{E}) = \varnothing$; equivalently, $S\backslash\bar{E}$ is a dense open set (exercise).
+We should now explain how this theorem has anything to do with categories (with the word's colloquial, muggle-friendly meaning). For a space $$S$$ and a subset $$E\subset S$$, $$E$$ is called *nowhere dense* if $$\operatorname{int}(\bar{E}) = \varnothing$$; equivalently, $$S\backslash\bar{E}$$ is a dense open set (exercise).
 
-For a Hausdorff space $S$ and a subset $E\subset S$, $E$ is of the *first (resp. second) category* if it is (resp. isn't) the union of countably many nowhere dense subsets. Then it is an easy corollary of BCT that a LCH space (e.g. $\RR$) is always a set of the second category (in itself). As an easy corollary of that, $\QQ$ is not the intersection of countably many open sets of $\RR$.
+For a Hausdorff space $$S$$ and a subset $$E\subset S$$, $$E$$ is of the *first (resp. second) category* if it is (resp. isn't) the union of countably many nowhere dense subsets. Then it is an easy corollary of BCT that a LCH space (e.g. $$\RR$$) is always a set of the second category (in itself). As an easy corollary of that, $$\QQ$$ is not the intersection of countably many open sets of $$\RR$$.
 
 
-We mention one striking application of BCT. It answers the following question: if a smooth function $f: [0,1]\to \RR$ satisfies that for any $x\in [0,1]$, there exists $n$ such that $f^{(n)}(x) = 0$, must $f$ be a polynomial?
+We mention one striking application of BCT. It answers the following question: if a smooth function $$f: [0,1]\to \RR$$ satisfies that for any $$x\in [0,1]$$, there exists $$n$$ such that $$f^{(n)}(x) = 0$$, must $$f$$ be a polynomial?
 
 <details>
 <summary>View solution</summary>
 <p> 
-Suppose $f$ is not a polynomial. Consider the union of all open intervals $(a,b) \subset [0,1]$ such that $f|_{(a,b)}$ is a polynomial. Let $X$ be the complement of this set. Then $X$ is a nonempty perfect set. Let $S_n = \{x \in [0,1] \mid f^{(n)}(x) = 0\}$, then each $S_n$ is closed, and the sets $X\cap S_1, X\cap S_2, \dots$ cover $X$. Because $X$ is LCH, we conclude one of $X\cap S_n$ is not nowhere dense, i.e. $\bar{X\cap S_n} = X\cap S_n$ contains $X\cap (r,s)$ for some open interval $(r,s)$. Since every point in $X$ is a limit point of $X$, we conclude $f^m(x) = 0$ for all $x\in X\cap (r,s)$ and $m\ge n$. On the other hand, consider any maximal interval in $(R\backslash X)\cap (r,s)$, and $f^n(x)$ must be zero on that interval as well. We conclude that $f^n$ is zero on $(r,s)$, so it is a polynomial on $(r,s)$. This contradicts the fact thst $(r,s)\not\subset (R\backslash X)$.
+Suppose $$f$$ is not a polynomial. Consider the union of all open intervals $$(a,b) \subset [0,1]$$ such that $$f|_{(a,b)}$$ is a polynomial. Let $$X$$ be the complement of this set. Then $$X$$ is a nonempty perfect set. Let $$S_n = \{x \in [0,1] \mid f^{(n)}(x) = 0\}$$, then each $$S_n$$ is closed, and the sets $$X\cap S_1, X\cap S_2, \dots$$ cover $$X$$. Because $$X$$ is LCH, we conclude one of $$X\cap S_n$$ is not nowhere dense, i.e. $$\bar{X\cap S_n} = X\cap S_n$$ contains $$X\cap (r,s)$$ for some open interval $$(r,s)$$. Since every point in $$X$$ is a limit point of $$X$$, we conclude $$f^m(x) = 0$$ for all $$x\in X\cap (r,s)$$ and $$m\ge n$$. On the other hand, consider any maximal interval in $$(R\backslash X)\cap (r,s)$$, and $$f^n(x)$$ must be zero on that interval as well. We conclude that $$f^n$$ is zero on $$(r,s)$$, so it is a polynomial on $$(r,s)$$. This contradicts the fact thst $$(r,s)\not\subset (R\backslash X)$$.
 </p>
 </details>
 
