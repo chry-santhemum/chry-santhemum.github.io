@@ -206,3 +206,9 @@ $$h(x) - \eps < f(x) < h(x) + \eps.$$
 
 This is sufficient to imply the theorem.
 
+
+## Exercises
+
+**Problem 1.** Show that there exist continuous but nowhere differentiable functions $$f: [0,1] \to \RR$$.
+
+**Problem 2.** Prove the complex version of Stone-Weierstrass: for a compact set $$S$4, let $$C(S; \CC)$$ denote the space of continuous functions $$S\to \CC$$, and suppose $$\mathscr{A}$$ is a function algebra *closed under complex conjugation* that separates points. Then $$\bar{\mathscr{A}} = C(S; \CC)$$.
